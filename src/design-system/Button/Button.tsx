@@ -3,7 +3,7 @@ import "./Button.css";
 
 type ButtonSize = "sm" | "md" | "lg";
 type ButtonShape = "rounded" | "circle";
-type ButtonColor = "primary" | "secondary" | "danger";
+type ButtonColor = "primary" | "secondary" | "danger" | "success";
 type ButtonVariant = "contained" | "outlined" | "text";
 
 type ButtonProps = {
@@ -31,6 +31,7 @@ const colorClassNames = {
     primary: "btn-primary",
     secondary: "btn-secondary",
     danger: "btn-danger",
+    success: "btn-success",
 };
 
 const variantClassNames = {

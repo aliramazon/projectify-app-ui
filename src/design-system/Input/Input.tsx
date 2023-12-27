@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Input.css";
 import { trimWhiteSpaces } from "../utils";
 import { Label } from "../Label";
@@ -26,6 +26,9 @@ type InputProps = {
     size?: "sm" | "md" | "lg";
     hintMessage?: string;
     labelText?: string;
+
+    onChange: (value: string) => void;
+    value: string;
 };
 const Input: React.FC<InputProps> = (props) => {
     const {
@@ -39,6 +42,8 @@ const Input: React.FC<InputProps> = (props) => {
         labelText,
         className,
         id,
+        onChange,
+        value,
     } = props;
 
     const sizeClassName = size !== undefined ? sizeClassNames[size] : "";
@@ -58,6 +63,14 @@ const Input: React.FC<InputProps> = (props) => {
         `hint-message ${error ? "hint-message--error" : ""}`
     );
 
+    const handleOnChange = (
+        e:
+            | React.ChangeEvent<HTMLTextAreaElement>
+            | React.ChangeEvent<HTMLInputElement>
+    ) => {
+        onChange(e.target.value);
+    };
+
     return (
         <div className="input-wrapper">
             {labelText ? (
@@ -71,6 +84,8 @@ const Input: React.FC<InputProps> = (props) => {
                     className={finalClassNames}
                     disabled={disabled}
                     id={id}
+                    onChange={handleOnChange}
+                    value={value}
                 />
             ) : (
                 <input
@@ -79,6 +94,8 @@ const Input: React.FC<InputProps> = (props) => {
                     placeholder={placeholder}
                     disabled={disabled}
                     id={id}
+                    onChange={handleOnChange}
+                    value={value}
                 />
             )}
 

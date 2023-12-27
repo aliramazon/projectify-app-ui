@@ -54,6 +54,10 @@ const Input: React.FC<InputProps> = (props) => {
         } ${sizeClassName} ${shapeClassName} ${errorClassName} ${textareaClassName}`
     );
 
+    const hintMessageClass = trimWhiteSpaces(
+        `hint-message ${error ? "hint-message--error" : ""}`
+    );
+
     return (
         <div className="input-wrapper">
             {labelText ? (
@@ -77,6 +81,10 @@ const Input: React.FC<InputProps> = (props) => {
                     id={id}
                 />
             )}
+
+            {hintMessage ? (
+                <span className={hintMessageClass}>{hintMessage}</span>
+            ) : null}
         </div>
     );
 };

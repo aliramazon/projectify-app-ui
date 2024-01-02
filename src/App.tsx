@@ -1,7 +1,7 @@
-import { Signin } from "./pages";
+import { ForgetPassword } from "./pages";
 
 const App = () => {
-    return <Signin />;
+    return <ForgetPassword />;
 };
 
 export { App };

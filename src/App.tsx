@@ -1,7 +1,7 @@
-import { ForgetPassword } from "./pages";
+import { ResetPassword } from "./pages";
 
 const App = () => {
-    return <ForgetPassword />;
+    return <ResetPassword />;
 };
 
 export { App };

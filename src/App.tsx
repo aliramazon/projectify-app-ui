@@ -1,7 +1,17 @@
-import { ResetPassword } from "./pages";
+import { useState } from "react";
+import { Toggle } from "./design-system";
 
 const App = () => {
-    return <ResetPassword />;
-};
+    const [value, setValue] = useState<boolean>(false);
 
+    const handleOnToggle = (value: boolean) => {
+        setValue(value);
+    };
+
+    return (
+        <div style={{ padding: "300px" }}>
+            <Toggle value={value} onToggle={handleOnToggle} />
+        </div>
+    );
+};
 export { App };

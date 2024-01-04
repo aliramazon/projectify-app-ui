@@ -4,5 +4,6 @@ export * from "./Input";
 export * from "./Label";
 export * from "./Modal";
 export * from "./Logo";
+export * from "./Toggle";
 
 export * from "./utils";

@@ -1,10 +1,29 @@
 import { useState } from "react";
+import styled from "styled-components";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
 
 import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
 
-import "./Signup.css";
+const Form = styled.form`
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-20);
+`;
+
+const PreferredNameInput = styled(Input)`
+    grid-column: 1 / 3;
+`;
+
+const EmailInput = styled(Input)`
+    grid-column: 1 / 3;
+`;
+
+const SubmitButton = styled(Button)`
+    grid-column: 1 / 3;
+`;
 
 const Signup = () => {
     const [firstName, setFirstName] = useState<string>("");
@@ -52,7 +71,7 @@ const Signup = () => {
 
     return (
         <AuthWrapper imageUrl={flatIronBuilding} pageTitle="Sign Up">
-            <form className="sign-up" onSubmit={createAccount}>
+            <Form onSubmit={createAccount}>
                 <Input
                     type="text"
                     placeholder="First Name"
@@ -69,23 +88,21 @@ const Signup = () => {
                     shape="rounded"
                     size="lg"
                 />
-                <Input
+                <PreferredNameInput
                     type="text"
                     placeholder="Preferred First Name"
                     value={preferredName}
                     onChange={handleOnChangeName}
                     shape="rounded"
                     size="lg"
-                    className="sign-up__preferred-name"
                 />
-                <Input
+                <EmailInput
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={handleOnChangeEmail}
                     shape="rounded"
                     size="lg"
-                    className="sign-up__email"
                 />
                 <Input
                     type="password"
@@ -103,17 +120,12 @@ const Signup = () => {
                     shape="rounded"
                     size="lg"
                 />
-                <Button
-                    color="primary"
-                    size="lg"
-                    shape="rounded"
-                    className="sign-up__submit-button"
-                >
+                <SubmitButton color="primary" size="lg" shape="rounded">
                     Sign Up
-                </Button>
-            </form>
+                </SubmitButton>
+            </Form>
         </AuthWrapper>
     );
 };
 
-export { Signup };
+export { Signup as AdminSignup };

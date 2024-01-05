@@ -1,8 +1,15 @@
 import { useState } from "react";
+import styled from "styled-components";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
 import manhattanStreet from "../../../assets/images/manhattan-street.jpg";
-import "./ForgetPassword.css";
+
+const Form = styled.form`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+`;
 
 const ForgetPassword = () => {
     const [email, setEmail] = useState<string>("");
@@ -17,8 +24,12 @@ const ForgetPassword = () => {
     };
 
     return (
-        <AuthWrapper imageUrl={manhattanStreet} pageTitle="Forget Password">
-            <form className="forget-password" onSubmit={getInstructions}>
+        <AuthWrapper
+            imageUrl={manhattanStreet}
+            pageTitle="Forget Password"
+            switchLayout
+        >
+            <Form onSubmit={getInstructions}>
                 <Input
                     type="email"
                     placeholder="Email"
@@ -36,9 +47,9 @@ const ForgetPassword = () => {
                 >
                     Get Instructions
                 </Button>
-            </form>
+            </Form>
         </AuthWrapper>
     );
 };
 
-export { ForgetPassword };
+export { ForgetPassword as AdminForgetPassword };

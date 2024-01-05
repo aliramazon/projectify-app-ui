@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
+import styled from "styled-components";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 
-import "./Signin.css";
+const Form = styled.form`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+`;
 
 const Signin = () => {
     const [email, setEmail] = useState<string>("");
@@ -25,7 +31,7 @@ const Signin = () => {
 
     return (
         <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
-            <form className="sign-in" onSubmit={signin}>
+            <Form>
                 <Input
                     type="email"
                     placeholder="Email"
@@ -50,9 +56,9 @@ const Signin = () => {
                 >
                     Sign In
                 </Button>
-            </form>
+            </Form>
         </AuthWrapper>
     );
 };
 
-export { Signin };
+export { Signin as AdminSignin };

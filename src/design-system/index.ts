@@ -7,5 +7,6 @@ export * from "./Logo";
 export * from "./Toggle";
 export * from "./SideBar";
 export * from "./Icon";
+export * from "./SideBar";
 
 export * from "./utils";

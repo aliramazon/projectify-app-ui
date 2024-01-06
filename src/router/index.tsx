@@ -11,6 +11,7 @@ import {
     AdminResetPassword,
     AdminPlatform,
     AdminProjects,
+    AdminTasks,
 } from "../pages";
 
 export const router = createBrowserRouter(
@@ -31,7 +32,7 @@ export const router = createBrowserRouter(
             <Route path="/platform" element={<AdminPlatform />}>
                 <Route path="projects" element={<AdminProjects />} />
                 <Route path="stories" element={<h1>Stories</h1>} />
-                <Route path="personal-tasks" element={<h1>Tasks</h1>} />
+                <Route path="personal-tasks" element={<AdminTasks />} />
                 <Route path="team-members" element={<h1>Members</h1>} />
             </Route>
         </>

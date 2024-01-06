@@ -4,6 +4,7 @@ import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
 
 import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
+import { Icon } from "../../../design-system/Icon/Icon";
 
 const Form = styled.form`
     width: 100%;
@@ -11,6 +12,10 @@ const Form = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-20);
+
+    svg {
+        color: red;
+    }
 `;
 
 const PreferredNameInput = styled(Input)`

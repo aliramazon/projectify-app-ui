@@ -14,22 +14,6 @@ const Form = styled.form`
     gap: var(--space-20);
 `;
 
-type BackendError = {
-    message: string;
-    statusCode: number;
-    isOperational: boolean;
-};
-export class CustomError extends Error {
-    statusCode: number;
-    isOperational: boolean;
-
-    constructor(backendError: BackendError) {
-        super(backendError.message);
-        this.statusCode = backendError.statusCode;
-        this.isOperational = backendError.isOperational;
-    }
-}
-
 const Signin = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -60,7 +44,7 @@ const Signin = () => {
             setEmail("");
             setPassword("");
         } catch (error) {
-            if (error instanceof CustomError) {
+            if (error instanceof Error) {
                 console.log(error.message);
                 setIsFormSubmitting(false);
                 setIsError(true);

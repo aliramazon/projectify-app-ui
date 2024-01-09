@@ -15,22 +15,6 @@ type SignInInput = {
     password: string;
 };
 
-type BackendError = {
-    message: string;
-    statusCode: number;
-    isOperational: boolean;
-};
-export class CustomError extends Error {
-    statusCode: number;
-    isOperational: boolean;
-
-    constructor(backendError: BackendError) {
-        super(backendError.message);
-        this.statusCode = backendError.statusCode;
-        this.isOperational = backendError.isOperational;
-    }
-}
-
 class Admin {
     url: string;
     constructor() {
@@ -68,9 +52,8 @@ class Admin {
                 body: JSON.stringify(input),
             });
             if (!response.ok) {
-                const data: BackendError = await response.json();
-                console.log(data);
-                throw new CustomError(data);
+                const data = await response.json();
+                throw new Error(data.message);
             }
 
             return response.json();

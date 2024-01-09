@@ -2,9 +2,9 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
+import { admin } from "../../../api";
 
 import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
-import { Icon } from "../../../design-system/Icon/Icon";
 
 const Form = styled.form`
     width: 100%;
@@ -38,6 +38,9 @@ const Signup = () => {
     const [password, setPassword] = useState<string>("");
     const [passwordConfirm, setPasswordConfirm] = useState<string>("");
 
+    const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
+    const [isError, setIsError] = useState<boolean>(false);
+
     const handleOnChangeFirstName = (value: string) => {
         setFirstName(value);
     };
@@ -62,16 +65,28 @@ const Signup = () => {
         setPasswordConfirm(value);
     };
 
-    const createAccount = (e: React.FormEvent<HTMLFormElement>) => {
+    const createAccount = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(
-            firstName,
-            lastName,
-            preferredName,
-            password,
-            passwordConfirm,
-            email
-        );
+        try {
+            setIsFormSubmitting(true);
+            await admin.signUp({
+                firstName,
+                lastName,
+                email,
+                password,
+                preferredName: preferredName,
+            });
+            setIsFormSubmitting(false);
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setPreferredName("");
+            setPassword("");
+            setPasswordConfirm("");
+        } catch (error) {
+            setIsFormSubmitting(false);
+            setIsError(true);
+        }
     };
 
     return (
@@ -84,6 +99,7 @@ const Signup = () => {
                     onChange={handleOnChangeFirstName}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
                 <Input
                     type="text"
@@ -92,6 +108,7 @@ const Signup = () => {
                     onChange={handleOnChangeLastName}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
                 <PreferredNameInput
                     type="text"
@@ -100,6 +117,7 @@ const Signup = () => {
                     onChange={handleOnChangeName}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
                 <EmailInput
                     type="email"
@@ -108,6 +126,7 @@ const Signup = () => {
                     onChange={handleOnChangeEmail}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
                 <Input
                     type="password"
@@ -116,6 +135,7 @@ const Signup = () => {
                     onChange={handleOnChangePassword}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
                 <Input
                     type="password"
@@ -124,8 +144,14 @@ const Signup = () => {
                     onChange={handleOnChangePasswordConfirm}
                     shape="rounded"
                     size="lg"
+                    disabled={isFormSubmitting}
                 />
-                <SubmitButton color="primary" size="lg" shape="rounded">
+                <SubmitButton
+                    color="primary"
+                    size="lg"
+                    shape="rounded"
+                    disabled={isFormSubmitting}
+                >
                     Sign Up
                 </SubmitButton>
             </Form>

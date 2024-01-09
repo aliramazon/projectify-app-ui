@@ -1,9 +1,10 @@
 type SignUpInput = {
     firstName: string;
     lastName: string;
+    preferredName?: string;
     email: string;
     password: string;
-    company: {
+    company?: {
         name: string;
         position: string;
     };
@@ -14,10 +15,30 @@ type SignInInput = {
     password: string;
 };
 
+type BackendError = {
+    message: string;
+    statusCode: number;
+    isOperational: boolean;
+};
+export class CustomError extends Error {
+    statusCode: number;
+    isOperational: boolean;
+
+    constructor(backendError: BackendError) {
+        super(backendError.message);
+        this.statusCode = backendError.statusCode;
+        this.isOperational = backendError.isOperational;
+    }
+}
+
 class Admin {
     url: string;
     constructor() {
-        this.url = `${process.env.REACT_APP_PROJECTIFY_API_URL}/admins`;
+        this.url = `${
+            process.env.NODE_ENV === "development"
+                ? process.env.REACT_APP_PROJECTIFY_API_URL_LOCAL
+                : process.env.REACT_APP_PROJECTIFY_API_URL
+        }/admins`;
     }
     async signUp(input: SignUpInput) {
         try {
@@ -37,7 +58,7 @@ class Admin {
         }
     }
 
-    async signIn(input: SignInInput) {
+    async signIn(input: SignInInput): Promise<{ token: string }> {
         try {
             const response = await fetch(`${this.url}/login`, {
                 method: "POST",
@@ -47,9 +68,12 @@ class Admin {
                 body: JSON.stringify(input),
             });
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.message);
+                const data: BackendError = await response.json();
+                console.log(data);
+                throw new CustomError(data);
             }
+
+            return response.json();
         } catch (error) {
             throw error;
         }

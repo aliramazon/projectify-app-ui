@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Button, Input } from "../../../design-system";
-import { AuthWrapper } from "../../components";
+import { AuthActionLink, AuthWrapper } from "../../components";
 import styled from "styled-components";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
@@ -12,6 +12,12 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: var(--space-20);
+`;
+
+const ActionLinks = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
 `;
 
 const Signin = () => {
@@ -45,7 +51,6 @@ const Signin = () => {
             setPassword("");
         } catch (error) {
             if (error instanceof Error) {
-                console.log(error.message);
                 setIsFormSubmitting(false);
                 setIsError(true);
             }
@@ -82,6 +87,18 @@ const Signin = () => {
                     Sign In
                 </Button>
             </Form>
+            <ActionLinks>
+                <AuthActionLink
+                    hintText="Don’t have an account?"
+                    linkTo="../admin/sign-up"
+                    linkText="Sign Up"
+                />
+                <AuthActionLink
+                    hintText="Forgot password? "
+                    linkTo="../admin/forget-password"
+                    linkText="Get Help"
+                />
+            </ActionLinks>
         </AuthWrapper>
     );
 };

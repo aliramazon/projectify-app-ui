@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button, Input } from "../../../design-system";
-import { AuthWrapper } from "../../components";
+import { useSearchParams, useNavigate } from "react-router-dom";
+import { Button, Input, Toaster } from "../../../design-system";
+import { AuthActionLink, AuthWrapper } from "../../components";
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
-import { useSearchParams } from "react-router-dom";
+import { admin } from "../../../api";
+import toast from "react-hot-toast";
 
 const Form = styled.form`
     width: 100%;
@@ -16,7 +18,9 @@ const ResetPassword = () => {
     const [password, setPassword] = useState<string>("");
     const [passwordConfirm, setPasswordConfirm] = useState<string>("");
     const [searchParams] = useSearchParams();
-    const resetPasswordToken = searchParams.get("resetPasswordToken");
+    const passwordResetToken = searchParams.get("passwordResetToken");
+
+    const navigate = useNavigate();
 
     const handleOnChangePassword = (value: string) => {
         setPassword(value);
@@ -26,40 +30,67 @@ const ResetPassword = () => {
         setPasswordConfirm(value);
     };
 
-    const resetPassword = (e: React.FormEvent<HTMLFormElement>) => {
+    const resetPassword = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(password, passwordConfirm);
+
+        try {
+            const response = await admin.resetPassword(
+                password,
+                passwordConfirm,
+                passwordResetToken as string
+            );
+
+            setPassword("");
+            setPasswordConfirm("");
+
+            toast.success(response.message);
+            setTimeout(() => {
+                navigate("/admin/sign-in");
+            }, 2000);
+        } catch (error) {
+            if (error instanceof Error) {
+                toast.error(error.message);
+            }
+        }
     };
 
     return (
-        <AuthWrapper
-            imageUrl={brooklynBridge}
-            pageTitle="Reset Password"
-            switchLayout
-        >
-            <Form onSubmit={resetPassword}>
-                <Input
-                    type="password"
-                    placeholder="New Password"
-                    value={password}
-                    onChange={handleOnChangePassword}
-                    shape="rounded"
-                    size="lg"
-                />
-                <Input
-                    type="password"
-                    placeholder="New Password Confirmation"
-                    value={passwordConfirm}
-                    onChange={handleOnChangePasswordConfirm}
-                    shape="rounded"
-                    size="lg"
-                />
+        <>
+            <AuthWrapper
+                imageUrl={brooklynBridge}
+                pageTitle="Reset Password"
+                switchLayout
+            >
+                <Form onSubmit={resetPassword}>
+                    <Input
+                        type="password"
+                        placeholder="New Password"
+                        value={password}
+                        onChange={handleOnChangePassword}
+                        shape="rounded"
+                        size="lg"
+                    />
+                    <Input
+                        type="password"
+                        placeholder="New Password Confirmation"
+                        value={passwordConfirm}
+                        onChange={handleOnChangePasswordConfirm}
+                        shape="rounded"
+                        size="lg"
+                    />
 
-                <Button color="primary" size="lg" shape="rounded">
-                    Reset Password
-                </Button>
-            </Form>
-        </AuthWrapper>
+                    <Button color="primary" size="lg" shape="rounded">
+                        Reset Password
+                    </Button>
+                </Form>
+                <AuthActionLink
+                    hintText="Get Instructions"
+                    linkText="Forget password"
+                    linkTo="../admin/forget-password"
+                />
+            </AuthWrapper>
+            <Toaster />
+        </>
     );
 };
 

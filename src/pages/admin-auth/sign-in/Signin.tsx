@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { Button, Input } from "../../../design-system";
 import { AuthActionLink, AuthWrapper } from "../../components";
 import styled from "styled-components";
+import { useLocalStorage } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { admin } from "../../../api";
@@ -26,6 +27,7 @@ const Signin = () => {
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
     const [isError, setIsError] = useState<boolean>(false);
     const navigate = useNavigate();
+    const [setItem, getItem] = useLocalStorage();
 
     const handleOnChangeEmail = (value: string) => {
         setEmail(value);
@@ -44,6 +46,7 @@ const Signin = () => {
                 password,
             });
             localStorage.setItem("authToken", token);
+            setItem("authToken", token);
             navigate("/admin/platform");
 
             setIsFormSubmitting(false);

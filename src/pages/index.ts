@@ -11,3 +11,6 @@ export * from "./team-member-auth/sign-in/Signin";
 export * from "./team-member-auth/forget-password/ForgetPassword";
 export * from "./team-member-auth/reset-password/ResetPassword";
 export * from "./team-member-auth/create-password/CreatePassword";
+
+export * from "./team-member-platform/Platform";
+export * from "./team-member-platform/personal-tasks/PersonalTasks";

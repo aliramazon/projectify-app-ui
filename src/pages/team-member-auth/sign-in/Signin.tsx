@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { Button, Input } from "../../../design-system";
-import { AuthActionLink, AuthWrapper } from "../../components";
+import { AppContent, AuthActionLink, AuthWrapper } from "../../components";
 import styled from "styled-components";
 import { useLocalStorage } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { admin } from "../../../api";
+import { AppContext } from "../../../App";
 
 const Form = styled.form`
     width: 100%;
@@ -28,6 +29,7 @@ const Signin = () => {
     const [isError, setIsError] = useState<boolean>(false);
     const navigate = useNavigate();
     const [setItem, getItem] = useLocalStorage();
+    const { counter, setCounter } = useContext(AppContext);
 
     const handleOnChangeEmail = (value: string) => {
         setEmail(value);
@@ -43,6 +45,7 @@ const Signin = () => {
 
     return (
         <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
+            <button onClick={() => setCounter(counter + 1)}>{counter}</button>
             <Form onSubmit={signin}>
                 <Input
                     type="email"

@@ -16,6 +16,8 @@ import {
     TeamMemberForgetPassword,
     TeamMemberResetPassword,
     TeamMemberCreatePassword,
+    TeamMemberPlatform,
+    TeamMemberPersonalTasks,
 } from "../pages";
 
 export const router = createBrowserRouter(
@@ -39,19 +41,27 @@ export const router = createBrowserRouter(
                 <Route path="team-members" element={<h1>Members</h1>} />
             </Route>
 
-            <Route path="/team-member/sign-in" element={<TeamMemberSignin />} />
+            <Route path="team-member/sign-in" element={<TeamMemberSignin />} />
             <Route
-                path="/team-member/forget-password"
+                path="team-member/forget-password"
                 element={<TeamMemberForgetPassword />}
             />
             <Route
-                path="/team-member/reset-password"
+                path="team-member/reset-password"
                 element={<TeamMemberResetPassword />}
             />
             <Route
-                path="/team-member/create-password"
+                path="team-member/create-password"
                 element={<TeamMemberCreatePassword />}
             />
+            <Route path="team-member/platform" element={<TeamMemberPlatform />}>
+                <Route path="stories" element={<h1>Stories</h1>} />
+                <Route
+                    path="personal-tasks"
+                    element={<TeamMemberPersonalTasks />}
+                />
+                <Route path="team-members" element={<h1>Members</h1>} />
+            </Route>
         </>
     )
 );

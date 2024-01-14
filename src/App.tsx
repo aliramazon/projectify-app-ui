@@ -1,36 +1,9 @@
-import React, {
-    useState,
-    createContext,
-    useContext,
-    Dispatch,
-    SetStateAction,
-} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
-type AppContextType = {
-    counter: number;
-    setCounter: Dispatch<SetStateAction<number>>;
-};
-
-export const AppContext = createContext<AppContextType>({
-    counter: 0,
-    setCounter: () => {},
-});
-
-export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
-    children,
-}) => {
-    const [counter, setCounter] = useState(0);
-    return (
-        <AppContext.Provider value={{ counter, setCounter }}>
-            {children}
-        </AppContext.Provider>
-    );
-};
+import { useStore } from "./hooks";
 
 const App = () => {
-    const { counter, setCounter } = useContext(AppContext);
-
+    const { counter, setCounter } = useStore();
     return (
         <div style={{ padding: "200px" }}>
             <h1>Welcome </h1>

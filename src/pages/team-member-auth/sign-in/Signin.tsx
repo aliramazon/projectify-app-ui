@@ -1,13 +1,11 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Button, Input } from "../../../design-system";
-import { AppContent, AuthActionLink, AuthWrapper } from "../../components";
+import { AuthActionLink, AuthWrapper } from "../../components";
 import styled from "styled-components";
-import { useLocalStorage } from "../../../hooks";
+import { useLocalStorage, useStore } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
-import { admin } from "../../../api";
-import { AppContext } from "../../../App";
 
 const Form = styled.form`
     width: 100%;
@@ -28,8 +26,7 @@ const Signin = () => {
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
     const [isError, setIsError] = useState<boolean>(false);
     const navigate = useNavigate();
-    const [setItem, getItem] = useLocalStorage();
-    const { counter, setCounter } = useContext(AppContext);
+    const { setItem, getItem } = useLocalStorage();
 
     const handleOnChangeEmail = (value: string) => {
         setEmail(value);
@@ -45,7 +42,6 @@ const Signin = () => {
 
     return (
         <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
-            <button onClick={() => setCounter(counter + 1)}>{counter}</button>
             <Form onSubmit={signin}>
                 <Input
                     type="email"

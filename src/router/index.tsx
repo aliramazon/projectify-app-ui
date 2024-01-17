@@ -19,6 +19,7 @@ import {
     TeamMemberPlatform,
     TeamMemberPersonalTasks,
 } from "../pages";
+import { Private } from "./Private";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -34,7 +35,16 @@ export const router = createBrowserRouter(
                 path="admin/reset-password"
                 element={<AdminResetPassword />}
             />
-            <Route path="admin/platform" element={<AdminPlatform />}>
+            <Route
+                path="admin/platform"
+                element={
+                    <Private
+                        component={<AdminPlatform />}
+                        userType="admin"
+                        to="../admin/sign-in"
+                    />
+                }
+            >
                 <Route path="projects" element={<AdminProjects />} />
                 <Route path="stories" element={<h1>Stories</h1>} />
                 <Route path="personal-tasks" element={<AdminTasks />} />
@@ -54,7 +64,16 @@ export const router = createBrowserRouter(
                 path="team-member/create-password"
                 element={<TeamMemberCreatePassword />}
             />
-            <Route path="team-member/platform" element={<TeamMemberPlatform />}>
+            <Route
+                path="team-member/platform"
+                element={
+                    <Private
+                        component={<TeamMemberPlatform />}
+                        userType="teamMember"
+                        to="../team-member/sign-in"
+                    />
+                }
+            >
                 <Route path="stories" element={<h1>Stories</h1>} />
                 <Route
                     path="personal-tasks"

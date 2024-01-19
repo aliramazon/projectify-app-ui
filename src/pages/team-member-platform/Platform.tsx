@@ -2,8 +2,9 @@ import { Outlet } from "react-router-dom";
 import { SideBar, SideBarLinks } from "../../design-system";
 import { AppContent, AppLayout, SideBarUser } from "../components";
 import { useNavigate } from "react-router-dom";
-import { useLocalStorage } from "../../hooks";
+import { useLocalStorage, useStore } from "../../hooks";
 import user from "../../assets/images/user.jpg";
+import { Actions } from "../../store";
 
 const links = [
     {
@@ -25,10 +26,16 @@ const links = [
 
 const Platform = () => {
     const navigate = useNavigate();
+    const {
+        state: { user },
+        dispatch,
+    } = useStore();
     const { removeItem } = useLocalStorage();
 
     const logOut = () => {
-        navigate("admin/sign-in");
+        removeItem("authToken");
+        dispatch({ type: Actions.RESET_STATE });
+        navigate("/team-member/sign-in");
     };
 
     return (
@@ -38,7 +45,6 @@ const Platform = () => {
                     details={{
                         firstName: "Asil",
                         lastName: "Bek",
-                        imageUrl: user,
                         email: "asilbek@gmail.com",
                     }}
                 />

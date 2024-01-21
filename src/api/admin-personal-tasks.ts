@@ -1,6 +1,7 @@
 import { Task } from "../types";
 
 type TaskCreateInput = Omit<Task, "id" | "status">;
+type TaskUpdateInput = Omit<Task, "id">;
 
 interface GetAllTasksResponse {
     data: {
@@ -60,6 +61,47 @@ class AdminPersonalTasks {
             }
 
             return response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async deleteTask(taskId: string) {
+        try {
+            const rawAuthToken = localStorage.getItem("authToken");
+            const authToken = rawAuthToken ? JSON.parse(rawAuthToken) : "";
+
+            const response = await fetch(`${this.url}/tasks/${taskId}/delete`, {
+                method: "PATCH",
+                headers: {
+                    authorization: `Bearer ${authToken}`,
+                },
+            });
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.message);
+            }
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async updateTask(taskId: string, input: TaskUpdateInput) {
+        try {
+            const rawAuthToken = localStorage.getItem("authToken");
+            const authToken = rawAuthToken ? JSON.parse(rawAuthToken) : "";
+
+            const response = await fetch(`${this.url}/tasks/${taskId}`, {
+                method: "PATCH",
+                headers: {
+                    authorization: `Bearer ${authToken}`,
+                },
+                body: JSON.stringify(input),
+            });
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.message);
+            }
         } catch (error) {
             throw error;
         }

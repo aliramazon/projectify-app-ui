@@ -1,9 +1,7 @@
-import { stat } from "fs";
 import {
     ActionType,
     Actions,
     AddTaskAction,
-    CreateTaskAction,
     PopulateTasksAction,
 } from "../actions";
 import { GlobalState, initialState } from "../state";

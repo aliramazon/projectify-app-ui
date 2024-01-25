@@ -6,6 +6,8 @@ import styled from "styled-components";
 import { useLocalStorage, useStore } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
+import { teamMember } from "../../../api";
+import toast from "react-hot-toast";
 
 const Form = styled.form`
     width: 100%;
@@ -36,13 +38,35 @@ const Signin = () => {
         setPassword(value);
     };
 
-    const signin = async (e: React.FormEvent<HTMLFormElement>) => {
+    const saveAuthToken = (token: string) => {
+        setItem("authToken", token);
+    };
+
+    const signIn = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        try {
+            setIsFormSubmitting(true);
+            const { token } = await teamMember.signIn({
+                email,
+                password,
+            });
+
+            saveAuthToken(token);
+            navigate("/team-member/platform");
+
+            setIsFormSubmitting(false);
+            setEmail("");
+            setPassword("");
+        } catch (e) {
+            const error = e as Error;
+            setIsFormSubmitting(false);
+            toast.error(error.message);
+        }
     };
 
     return (
         <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
-            <Form onSubmit={signin}>
+            <Form onSubmit={signIn}>
                 <Input
                     type="email"
                     placeholder="Email"
@@ -73,7 +97,7 @@ const Signin = () => {
             <ActionLinks>
                 <AuthActionLink
                     hintText="Don’t have an account?"
-                    linkTo="../admin/sign-up"
+                    linkTo="../team-member/sign-up"
                     linkText="Sign Up"
                 />
                 <AuthActionLink

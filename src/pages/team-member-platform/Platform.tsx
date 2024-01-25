@@ -3,7 +3,7 @@ import { SideBar, SideBarLinks } from "../../design-system";
 import { AppContent, AppLayout, SideBarUser } from "../components";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage, useStore } from "../../hooks";
-import user from "../../assets/images/user.jpg";
+
 import { Actions } from "../../store";
 
 const links = [
@@ -34,6 +34,7 @@ const Platform = () => {
 
     const logOut = () => {
         removeItem("authToken");
+        removeItem("userRole");
         dispatch({ type: Actions.RESET_STATE });
         navigate("/team-member/sign-in");
     };
@@ -43,9 +44,10 @@ const Platform = () => {
             <SideBar>
                 <SideBarUser
                     details={{
-                        firstName: "Asil",
-                        lastName: "Bek",
-                        email: "asilbek@gmail.com",
+                        firstName: user?.firstName || "",
+                        lastName: user?.lastName || "",
+                        imageUrl: "",
+                        email: user?.email || "",
                     }}
                 />
                 <SideBarLinks links={links} logOut={logOut} />

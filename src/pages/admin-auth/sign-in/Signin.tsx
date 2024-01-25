@@ -7,6 +7,7 @@ import { useLocalStorage } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { admin } from "../../../api";
+import toast from "react-hot-toast";
 
 const Form = styled.form`
     width: 100%;
@@ -25,7 +26,6 @@ const Signin = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
-    const [isError, setIsError] = useState<boolean>(false);
     const navigate = useNavigate();
     const { setItem } = useLocalStorage();
 
@@ -56,11 +56,10 @@ const Signin = () => {
             setIsFormSubmitting(false);
             setEmail("");
             setPassword("");
-        } catch (error) {
-            if (error instanceof Error) {
-                setIsFormSubmitting(false);
-                setIsError(true);
-            }
+        } catch (e) {
+            const error = e as Error;
+            setIsFormSubmitting(false);
+            toast.error(error.message);
         }
     };
 

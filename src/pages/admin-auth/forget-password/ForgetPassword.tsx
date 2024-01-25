@@ -24,13 +24,12 @@ const ForgetPassword = () => {
         e.preventDefault();
 
         try {
-            const response = await admin.forgotPassword(email);
+            const response = await admin.forgetPassword(email);
             setEmail("");
             toast.success(response.message);
-        } catch (error) {
-            if (error instanceof Error) {
-                toast.error(error.message);
-            }
+        } catch (e) {
+            const error = e as Error;
+            toast.error(error.message);
         }
     };
 

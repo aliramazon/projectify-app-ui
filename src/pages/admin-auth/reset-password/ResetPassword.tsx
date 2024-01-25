@@ -43,14 +43,14 @@ const ResetPassword = () => {
             setPassword("");
             setPasswordConfirm("");
 
-            toast.success(response.message);
+            const toastId = toast.success(response.message);
             setTimeout(() => {
                 navigate("/admin/sign-in");
+                toast.remove(toastId);
             }, 2000);
-        } catch (error) {
-            if (error instanceof Error) {
-                toast.error(error.message);
-            }
+        } catch (e) {
+            const error = e as Error;
+            toast.error(error.message);
         }
     };
 

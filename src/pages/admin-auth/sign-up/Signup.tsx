@@ -39,6 +39,8 @@ const Signup = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [passwordConfirm, setPasswordConfirm] = useState<string>("");
+    const [company, setCompany] = useState<string>("");
+    const [position, setPosition] = useState<string>("");
 
     const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
 
@@ -66,8 +68,22 @@ const Signup = () => {
         setPasswordConfirm(value);
     };
 
+    const handleOnChangeCompany = (value: string) => {
+        setCompany(value);
+    };
+
+    const handleOnChangePosition = (value: string) => {
+        setPosition(value);
+    };
+
     const isFormSubmittable =
-        firstName && lastName && email && password && passwordConfirm;
+        firstName &&
+        lastName &&
+        email &&
+        password &&
+        passwordConfirm &&
+        company &&
+        position;
 
     const createAccount = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -92,7 +108,6 @@ const Signup = () => {
         } catch (error) {
             if (error instanceof Error) {
                 setIsFormSubmitting(false);
-
                 toast.error(error.message);
             }
         }
@@ -156,6 +171,25 @@ const Signup = () => {
                         size="lg"
                         disabled={isFormSubmitting}
                     />
+                    <Input
+                        type="text"
+                        placeholder="Company"
+                        value={company}
+                        onChange={handleOnChangeCompany}
+                        shape="rounded"
+                        size="lg"
+                        disabled={isFormSubmitting}
+                    />
+                    <Input
+                        type="text"
+                        placeholder="Position"
+                        value={position}
+                        onChange={handleOnChangePosition}
+                        shape="rounded"
+                        size="lg"
+                        disabled={isFormSubmitting}
+                    />
+
                     <SubmitButton
                         color="primary"
                         size="lg"

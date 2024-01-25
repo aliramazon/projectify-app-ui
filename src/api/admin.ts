@@ -69,7 +69,7 @@ class Admin {
         }
     }
 
-    async forgotPassword(email: string) {
+    async forgetPassword(email: string) {
         try {
             const response = await fetch(`${this.url}/forgot-password`, {
                 method: "PATCH",

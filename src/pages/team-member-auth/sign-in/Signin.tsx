@@ -96,11 +96,6 @@ const Signin = () => {
             </Form>
             <ActionLinks>
                 <AuthActionLink
-                    hintText="Don’t have an account?"
-                    linkTo="../team-member/sign-up"
-                    linkText="Sign Up"
-                />
-                <AuthActionLink
                     hintText="Forgot password? "
                     linkTo="../team-member/forget-password"
                     linkText="Get Help"

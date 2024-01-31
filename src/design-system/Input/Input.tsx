@@ -1,7 +1,8 @@
 import React from "react";
-import "./Input.css";
-import { trimWhiteSpaces } from "../utils";
+import { InputProps } from "./types";
 import { Label } from "../Label";
+import { trimWhiteSpaces } from "../utils";
+import "./Input.css";
 
 const sizeClassNames = {
     sm: "input-small",
@@ -14,22 +15,6 @@ const shapeClassNames = {
     circle: "input-circle",
 };
 
-type InputProps = {
-    type?: "text" | "email" | "password" | "tel" | "textarea";
-    disabled?: boolean;
-    placeholder: string;
-    className?: string;
-    id?: string;
-
-    error?: boolean;
-    shape?: "rounded" | "circle";
-    size?: "sm" | "md" | "lg";
-    hintMessage?: string;
-    labelText?: string;
-
-    onChange: (value: string) => void;
-    value: string;
-};
 const Input: React.FC<InputProps> = (props) => {
     const {
         type,

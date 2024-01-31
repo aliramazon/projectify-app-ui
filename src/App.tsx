@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { DatePicker } from "./design-system";
-import "react-datepicker/dist/react-datepicker.css";
+import { DatePickerV1 } from "./design-system";
+
 import { useState } from "react";
 
 const App = () => {
     const [date, setDate] = useState<Date>();
     return (
-        <div style={{ padding: "200px" }}>
+        <div style={{ padding: "50px" }}>
             <h1>Welcome </h1>
 
             <Link to="team-member/sign-in">Sign in</Link>
@@ -14,10 +14,12 @@ const App = () => {
             <Link to="admin/forget-password">Forget Password</Link>
             <Link to="admin/reset-password">Reset Password</Link>
             <div>
-                <DatePicker
+                <DatePickerV1
                     selected={date}
                     onChange={(date) => setDate(date)}
                     placeholder="Select Deadline"
+                    shape="circle"
+                    inputSize="lg"
                 />
             </div>
         </div>

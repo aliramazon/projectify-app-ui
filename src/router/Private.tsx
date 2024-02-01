@@ -61,7 +61,7 @@ const Private: React.FC<ProtectedRouteProps> = ({ component, userType }) => {
     }
 
     if (loading) {
-        return <h1>Loading</h1>;
+        return null;
     }
 
     const userRole = getItem("userRole");

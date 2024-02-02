@@ -77,6 +77,3 @@ const Private: React.FC<ProtectedRouteProps> = ({ component, userType }) => {
 };
 
 export { Private };
-
-// If not token, navigate to signin page - done
-//

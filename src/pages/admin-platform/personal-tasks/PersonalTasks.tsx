@@ -181,6 +181,10 @@ const Tasks = () => {
             });
     };
 
+    const onSelectTaskCardMenuAction = (value: string, taskId: string) => {
+        console.log(value, taskId);
+    };
+
     const groupedTasks = groupTasksByStatus(adminPersonalTasks);
 
     return (
@@ -239,6 +243,23 @@ const Tasks = () => {
                                             <TaskCard
                                                 key={task.id}
                                                 task={task}
+                                                menuActions={[
+                                                    {
+                                                        label: "Edit",
+                                                        value: "editTask",
+                                                        variant: "primary",
+                                                        iconName: "edit",
+                                                    },
+                                                    {
+                                                        label: "Delete",
+                                                        value: "deleteTask",
+                                                        variant: "danger",
+                                                        iconName: "delete",
+                                                    },
+                                                ]}
+                                                onSelectMenuAction={
+                                                    onSelectTaskCardMenuAction
+                                                }
                                             />
                                         );
                                     })}

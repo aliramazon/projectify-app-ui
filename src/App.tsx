@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
-import { Select } from "./design-system/Select";
+import { OptionValue, Select } from "./design-system/Select";
 
 const App = () => {
     const [date, setDate] = useState<Date>();
+    const [value, setValue] = useState<OptionValue>("");
     return (
         <div style={{ padding: "50px" }}>
             <h1>Welcome </h1>
@@ -23,11 +24,11 @@ const App = () => {
                         { label: "Option5", value: "option5" },
                         { label: "Option6", value: "option6" },
                     ]}
-                    value="option2"
                     headerPlaceholder="Select Option"
-                    onSelect={(value) => {}}
+                    onSelect={(option) => setValue(option.value)}
                     size="md"
-                    shape="rounded"
+                    shape="circle"
+                    value={value}
                 />
             </div>
         </div>

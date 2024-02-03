@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { useLocalStorage, useStore } from "../../../hooks";
 
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
-import { teamMember } from "../../../api";
+import { teamMemberService } from "../../../api";
 import toast from "react-hot-toast";
 
 const Form = styled.form`
@@ -46,7 +46,7 @@ const Signin = () => {
         e.preventDefault();
         try {
             setIsFormSubmitting(true);
-            const { token } = await teamMember.signIn({
+            const { token } = await teamMemberService.signIn({
                 email,
                 password,
             });

@@ -4,7 +4,7 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import { Button, Input, Toaster } from "../../../design-system";
 import { AuthActionLink, AuthWrapper } from "../../components";
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
-import { admin } from "../../../api";
+import { adminService } from "../../../api";
 import toast from "react-hot-toast";
 
 const Form = styled.form`
@@ -34,7 +34,7 @@ const ResetPassword = () => {
         e.preventDefault();
 
         try {
-            const response = await admin.resetPassword(
+            const response = await adminService.resetPassword(
                 password,
                 passwordConfirm,
                 passwordResetToken as string

@@ -3,7 +3,7 @@ import { Task, TaskStatus } from "../types";
 export type TaskCreateInput = Omit<Task, "id" | "status">;
 export type TaskUpdateInput = {
     title?: string;
-    descriptio?: string;
+    description?: string;
     due?: Date;
     status?: TaskStatus;
 };
@@ -114,4 +114,4 @@ class AdminPersonalTasks {
     }
 }
 
-export const adminPersonalTasks = new AdminPersonalTasks();
+export const adminTasksService = new AdminPersonalTasks();

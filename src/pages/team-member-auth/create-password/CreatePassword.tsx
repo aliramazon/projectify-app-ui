@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import toast from "react-hot-toast";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { Button, Input } from "../../../design-system";
-import { AuthActionLink, AuthWrapper } from "../../components";
+import { AuthWrapper } from "../../components";
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
-import { teamMember } from "../../../api";
+import { teamMemberService } from "../../../api";
 
 const Form = styled.form`
     width: 100%;
@@ -38,7 +37,7 @@ const CreatePassword = () => {
         e.preventDefault();
         const inviteToken = searchParams.get("inviteToken");
         console.log(inviteToken);
-        teamMember
+        teamMemberService
             .createPassword(
                 { email, password, passwordConfirm },
                 inviteToken as string

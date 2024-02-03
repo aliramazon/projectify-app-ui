@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 import { Button, Input, Toaster } from "../../../design-system";
 import { AuthActionLink, AuthWrapper } from "../../components";
-import { admin } from "../../../api";
+import { adminService } from "../../../api";
 
 import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
 
@@ -89,7 +89,7 @@ const Signup = () => {
         e.preventDefault();
         try {
             setIsFormSubmitting(true);
-            const response = await admin.signUp({
+            const response = await adminService.signUp({
                 firstName,
                 lastName,
                 email,

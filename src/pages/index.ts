@@ -5,7 +5,7 @@ export * from "./admin-auth/reset-password/ResetPassword";
 
 export * from "./admin-platform/Platform";
 export * from "./admin-platform/projects/Projects";
-export * from "./admin-platform/personal-tasks/PersonalTasks";
+export * from "./admin-platform/personal-tasks/";
 
 export * from "./team-member-auth/sign-in/Signin";
 export * from "./team-member-auth/forget-password/ForgetPassword";

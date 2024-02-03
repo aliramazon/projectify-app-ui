@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { DatePickerV1 } from "./design-system";
 
 import { useState } from "react";
+import { Select } from "./design-system/Select";
 
 const App = () => {
     const [date, setDate] = useState<Date>();
@@ -14,12 +14,20 @@ const App = () => {
             <Link to="admin/forget-password">Forget Password</Link>
             <Link to="admin/reset-password">Reset Password</Link>
             <div>
-                <DatePickerV1
-                    selected={date}
-                    onChange={(date) => setDate(date)}
-                    placeholder="Select Deadline"
+                <Select
+                    options={[
+                        { label: "Option1", value: "option1" },
+                        { label: "Option2", value: "option2" },
+                        { label: "Option3", value: "option3" },
+                        { label: "Option4", value: "option4" },
+                        { label: "Option5", value: "option5" },
+                        { label: "Option6", value: "option6" },
+                    ]}
+                    value="option2"
+                    headerPlaceholder="Select Option"
+                    onSelect={(value) => {}}
+                    size="md"
                     shape="rounded"
-                    inputSize="lg"
                 />
             </div>
         </div>

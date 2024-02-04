@@ -23,10 +23,10 @@ const ActionLinks = styled.div`
 `;
 
 const Signin = () => {
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
-    const [isFormSubmitting, setIsFormSubmitting] = useState<boolean>(false);
-    const [isError, setIsError] = useState<boolean>(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [isFormSubmitting, setIsFormSubmitting] = useState(false);
+    const [isError, setIsError] = useState(false);
     const navigate = useNavigate();
     const { setItem, getItem } = useLocalStorage();
 

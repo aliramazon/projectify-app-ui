@@ -14,9 +14,9 @@ const Form = styled.form`
 `;
 
 const CreatePassword = () => {
-    const [password, setPassword] = useState<string>("");
-    const [passwordConfirm, setPasswordConfirm] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState("");
+    const [email, setEmail] = useState("");
     const [searchParams] = useSearchParams();
 
     const navigate = useNavigate();

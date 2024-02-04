@@ -14,8 +14,8 @@ const Form = styled.form`
 `;
 
 const ResetPassword = () => {
-    const [password, setPassword] = useState<string>("");
-    const [passwordConfirm, setPasswordConfirm] = useState<string>("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState("");
     const [searchParams] = useSearchParams();
     const passwordResetToken = searchParams.get("passwordResetToken");
 

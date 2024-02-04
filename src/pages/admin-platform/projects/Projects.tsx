@@ -28,8 +28,7 @@ const Buttons = styled.div`
 
 const Projects = () => {
     const [projects, setProject] = useState<string[]>([]);
-    const [showCreateProjectModal, setShowCreateProjectModal] =
-        useState<boolean>(false);
+    const [showCreateProjectModal, setShowCreateProjectModal] = useState(false);
 
     return (
         <PageBase>

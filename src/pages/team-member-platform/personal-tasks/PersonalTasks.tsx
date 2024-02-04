@@ -28,8 +28,7 @@ const Buttons = styled.div`
 
 const Tasks = () => {
     const [tasks, setTasks] = useState<string[]>([]);
-    const [showCreateTaskModal, setShowCreateTaskModal] =
-        useState<boolean>(false);
+    const [showCreateTaskModal, setShowCreateTaskModal] = useState(false);
 
     return (
         <PageBase>

@@ -4,6 +4,7 @@ import {
     AddTaskAction,
     ChangeTaskStatusAction,
     PopulateTasksAction,
+    RemoveTaskAction,
     UpdateTaskAction,
 } from "../actions";
 import { GlobalState, initialState } from "../state";
@@ -67,6 +68,15 @@ export const userReducer = (
         return {
             ...state,
             adminPersonalTasks: updatedTasks,
+        };
+    } else if (action.type === Actions.REMOVE_TASK) {
+        const payload = action.payload as RemoveTaskAction["payload"];
+
+        return {
+            ...state,
+            adminPersonalTasks: state.adminPersonalTasks.filter(
+                (task) => task.id !== payload.id
+            ),
         };
     }
 

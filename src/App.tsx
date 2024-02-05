@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
-import { Checkbox } from "./design-system";
+import { Checkbox, Switch } from "./design-system";
 
 const App = () => {
     const [value, setValue] = useState(false);
@@ -21,6 +21,12 @@ const App = () => {
                     checked={value}
                     onChange={(value) => setValue(value)}
                     shape="rounded"
+                />
+
+                <Switch
+                    checked={value}
+                    onSwitch={(value) => setValue(value)}
+                    shape="circle"
                 />
             </div>
         </div>

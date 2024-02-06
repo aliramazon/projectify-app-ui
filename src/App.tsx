@@ -14,7 +14,7 @@ const App = () => {
             <Link to="admin/sign-in">Sign in</Link>
             <Link to="admin/forget-password">Forget Password</Link>
             <Link to="admin/reset-password">Reset Password</Link>
-            <div>
+            <div style={{ background: "aqua" }}>
                 <Checkbox
                     label="Hello world"
                     id="checkbox"
@@ -27,6 +27,8 @@ const App = () => {
                     checked={value}
                     onSwitch={(value) => setValue(value)}
                     shape="circle"
+                    id="switch"
+                    position="end"
                 />
             </div>
         </div>

@@ -15,8 +15,11 @@
     padding: var(--space-2);
 
     background-color: var(--jaguar-100);
+
     transition: all 0.2s;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 /* Track Rounded */
 .switch-rounded.switch__track {

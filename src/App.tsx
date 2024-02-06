@@ -14,7 +14,7 @@ const App = () => {
             <Link to="admin/sign-in">Sign in</Link>
             <Link to="admin/forget-password">Forget Password</Link>
             <Link to="admin/reset-password">Reset Password</Link>
-            <div style={{ background: "aqua" }}>
+            <div>
                 <Checkbox
                     label="Hello world"
                     id="checkbox"

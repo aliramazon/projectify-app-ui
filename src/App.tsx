@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
-import { Checkbox, Switch } from "./design-system";
+import { Checkbox, LinearProgress, Switch } from "./design-system";
 
 const App = () => {
     const [value, setValue] = useState(false);
@@ -30,6 +30,14 @@ const App = () => {
                     id="switch"
                     position="end"
                 />
+            </div>
+            <div>
+                <LinearProgress value={50} color="orange" error />
+                <LinearProgress value={40} color="blue" />
+                <LinearProgress value={40} color="green" />
+                <LinearProgress value={40} color="red" />
+
+                <LinearProgress value={30} />
             </div>
         </div>
     );

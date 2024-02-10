@@ -5,3 +5,4 @@ export * from "./NoDataPlaceholder";
 export * from "./Auth/AuthActionLink";
 export * from "./KanbanCard";
 export * from "./ConfirmationModal";
+export * from "./PageHeader";

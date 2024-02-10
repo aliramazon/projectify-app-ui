@@ -5,6 +5,7 @@ import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
 import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { teamMemberService } from "../../../api";
+import toast from "react-hot-toast";
 
 const Form = styled.form`
     width: 100%;
@@ -43,6 +44,7 @@ const CreatePassword = () => {
                 inviteToken as string
             )
             .then((data) => {
+                toast.success("Great. Now you can sign in!");
                 navigate("/team-member/sign-in");
             })
             .catch((error) => {

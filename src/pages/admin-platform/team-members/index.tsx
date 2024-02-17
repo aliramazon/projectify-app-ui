@@ -39,9 +39,11 @@ const AdminTeamMembersPage = () => {
 
     if (isTeamMembersFetching) return null;
 
+    const teamMembersArr = Object.values(teamMembers);
+
     return (
         <Page>
-            {!teamMembers.length ? (
+            {!teamMembersArr.length ? (
                 <NoDataPlaceholder
                     illustrationUrl={noTeamMember}
                     text="You don’t have any team members yet!"
@@ -58,7 +60,7 @@ const AdminTeamMembersPage = () => {
                         }
                     />
                     <TeamMemberFilters />
-                    <TeamMembersTable data={teamMembers} />
+                    <TeamMembersTable data={teamMembersArr} />
                 </PageContent>
             )}
 

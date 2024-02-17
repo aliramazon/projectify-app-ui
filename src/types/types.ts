@@ -55,3 +55,10 @@ export interface TeamMember {
     email: string;
     joinDate: Date;
 }
+
+export interface TeamMemberUpdate {
+    firstName?: string;
+    lastName?: string;
+    position?: string;
+    joinDate?: Date;
+}

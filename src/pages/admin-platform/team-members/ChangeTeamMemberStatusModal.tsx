@@ -3,10 +3,7 @@ import { teamMemberService } from "../../../api";
 import { useStore } from "../../../hooks";
 import { Actions, AdminChangeTeamMemberStatusAction } from "../../../store";
 import { ConfirmationModal } from "../../components";
-import {
-    AdminTeamMemberActions,
-    AdminTeamMemberStatusChange,
-} from "../../../types";
+import { AdminTeamMemberStatusChange } from "../../../types";
 
 type ChangeTeamMemberStatusModalProps = {
     show: boolean;

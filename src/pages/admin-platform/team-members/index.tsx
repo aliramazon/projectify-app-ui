@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NoDataPlaceholder, Page, PageContent } from "../../components";
+import { NoDataPlaceholder } from "../../components";
 import { CreateTeamMemberModal } from "./CreateTeamMemberModal";
 import noTeamMember from "../../../assets/illustrations/no-team-member.svg";
 import { useStore } from "../../../hooks";
@@ -56,7 +56,7 @@ const AdminTeamMembersPage = () => {
     );
 
     return (
-        <Page>
+        <>
             {!teamMembersArr.length ? (
                 <NoDataPlaceholder
                     illustrationUrl={noTeamMember}
@@ -65,7 +65,7 @@ const AdminTeamMembersPage = () => {
                     buttonAction={() => setShowCreateTeamMemberModal(true)}
                 ></NoDataPlaceholder>
             ) : (
-                <PageContent>
+                <>
                     <PageHeader
                         pageTitle="Team Members"
                         actionButtonText="Create A Member"
@@ -78,14 +78,14 @@ const AdminTeamMembersPage = () => {
                         selectedStatus={statusFilter}
                     />
                     <TeamMembersTable data={filteredTeamMembers} />
-                </PageContent>
+                </>
             )}
 
             <CreateTeamMemberModal
                 show={showCreateTeamMemberModal}
                 closeModal={() => setShowCreateTeamMemberModal(false)}
             />
-        </Page>
+        </>
     );
 };
 

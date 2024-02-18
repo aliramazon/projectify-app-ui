@@ -14,6 +14,7 @@ import {
 import { useStore } from "../../../hooks";
 import { Actions, AdminAddTeamMemberAction } from "../../../store";
 import { teamMemberService } from "../../../api";
+import { formatISO } from "date-fns";
 
 type ModalProps = {
     show: boolean;
@@ -91,7 +92,7 @@ const CreateTeamMemberModal: React.FC<ModalProps> = ({ show, closeModal }) => {
             firstName,
             lastName,
             email,
-            joinDate: joinDate!,
+            joinDate: formatISO(joinDate!),
             position: position?.value as string,
         };
         try {

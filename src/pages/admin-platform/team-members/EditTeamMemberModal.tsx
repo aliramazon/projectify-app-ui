@@ -44,7 +44,7 @@ const EditTeamMemberModal: React.FC<ModalProps> = ({
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [position, setPosition] = useState("");
-    const [joinDate, setJoinDate] = useState<Date>();
+    const [joinDate, setJoinDate] = useState<Date | null>();
     const {
         dispatch,
         state: { teamMembers },

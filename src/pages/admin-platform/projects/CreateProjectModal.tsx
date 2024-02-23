@@ -70,7 +70,6 @@ const CreateProjectModal: React.FC<CreateProjectModalProps> = ({
                     inputSize="lg"
                     shape="rounded"
                     placeholder="Star Date - End Date"
-                    selected={startDate}
                     onChange={onChangeDatePicker}
                     selectsRange={true}
                     startDate={startDate}

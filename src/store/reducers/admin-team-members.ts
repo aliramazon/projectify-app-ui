@@ -62,6 +62,7 @@ const adminTeamMembersReducer = produce(
                 }
                 return draft;
             }
+
             default:
                 return draft;
         }

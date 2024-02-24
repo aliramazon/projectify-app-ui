@@ -12,6 +12,8 @@ import {
 import { useState } from "react";
 import { projectService } from "../../../api";
 import { toIso8601 } from "../../../utils";
+import { useStore } from "../../../hooks";
+import { Actions, AddProjectAction } from "../../../store";
 
 type CreateProjectModalProps = {
     show: boolean;
@@ -42,6 +44,8 @@ const CreateProjectModal: React.FC<CreateProjectModalProps> = ({
     const [endDate, setEndDate] = useState<Date | null>();
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
+
+    const { dispatch } = useStore();
 
     const onChangeDatePicker = (dates: DatePickerOnChangeDateType) => {
         if (Array.isArray(dates)) {
@@ -83,6 +87,11 @@ const CreateProjectModal: React.FC<CreateProjectModalProps> = ({
         projectService
             .create(input)
             .then((data) => {
+                const action: AddProjectAction = {
+                    type: Actions.ADD_PROJECT,
+                    payload: data.data,
+                };
+                dispatch(action);
                 clearFields();
                 closeModal();
                 toast.success("Project has been successfully created"!);

@@ -1,6 +1,7 @@
 import {
     AdminUser,
     Project,
+    ProjectStatus,
     ProjectWithContributors,
     Task,
     TaskStatus,
@@ -28,6 +29,7 @@ export enum Actions {
 
     ADD_PROJECT = "ADD_PROJECT",
     POPULATE_PROJECTS = "POPULATE_PROJECTS",
+    CHANGE_PROJECT_STATUS = "CHANGE_PROJECT_STATUS",
 }
 
 export interface InitUserAction {
@@ -113,6 +115,11 @@ export type AddProjectAction = {
 export type PopulateProjectsAction = {
     type: Actions.POPULATE_PROJECTS;
     payload: ProjectWithContributors[];
+};
+
+export type ChangeProjectStatusAction = {
+    type: Actions.CHANGE_PROJECT_STATUS;
+    payload: ProjectStatus;
 };
 
 export type ActionType =

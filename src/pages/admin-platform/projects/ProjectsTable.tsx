@@ -15,7 +15,7 @@ import {
 } from "../../../design-system";
 import { Scrollable } from "../../components";
 import { ProjectWithContributors } from "../../../types";
-import { formatAsMMMddYYYY } from "../../../utils";
+import { formatAsMMMddYYYY, formatDeadline } from "../../../utils";
 
 const TableContainer = styled(Scrollable)`
     height: calc(100% - 13rem);
@@ -39,6 +39,32 @@ const AboutProject = styled.div`
 const ProgressWrapper = styled.div`
     width: 80%;
 `;
+
+const Deadline = styled(Typography)`
+    &.green {
+        color: var(--green-600);
+    }
+
+    &.red {
+        color: var(--red-orange-600);
+    }
+`;
+
+const renderDeadline = (isoDate: string) => {
+    const formattedDeadline = formatDeadline(isoDate);
+    let className = "";
+    if (formattedDeadline.includes("left")) {
+        className = "red";
+    } else {
+        className = "green";
+    }
+
+    return (
+        <Deadline variant="paragraphSM" weight="medium" className={className}>
+            {formattedDeadline}
+        </Deadline>
+    );
+};
 
 const columns = ["20%", "10%", "20%", "15%", "15%", "10%", "10%"];
 enum StatusToBadgeColors {
@@ -65,8 +91,9 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                 </TableHead>
                 <TableBody>
                     {data.map((project) => {
+                        console.log(project);
                         return (
-                            <TableRow columns={columns}>
+                            <TableRow key={project.id} columns={columns}>
                                 <TableBodyCell>
                                     <AboutProject>
                                         <Typography
@@ -96,7 +123,7 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                                 <TableBodyCell>
                                     <ProgressWrapper>
                                         <LinearProgress
-                                            value={75}
+                                            value={project.progress}
                                             color="blue"
                                             shape="rounded"
                                         />
@@ -115,7 +142,7 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                                         variant="paragraphSM"
                                         weight="medium"
                                     >
-                                        {formatAsMMMddYYYY(project.endDate)}
+                                        {renderDeadline(project.endDate)}
                                     </Typography>
                                 </TableBodyCell>
                                 <TableBodyCell>

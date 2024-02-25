@@ -23,7 +23,7 @@ import {
 import { DeleteTeamMemberModal } from "./DeleteTeamMemberModal";
 import { ChangeTeamMemberStatusModal } from "./ChangeTeamMemberStatusModal";
 import { EditTeamMemberModal } from "./EditTeamMemberModal";
-import { toDateObj } from "../../../utils";
+import { formatAsMMMddYYYY } from "../../../utils";
 import { Scrollable } from "../../components";
 
 type TeamMembersTableProps = {
@@ -32,6 +32,10 @@ type TeamMembersTableProps = {
 
 const TableContainer = styled(Scrollable)`
     height: calc(100% - 13rem);
+`;
+
+const JoinedDate = styled(Typography)`
+    color: var(--blue-ribbon-600);
 `;
 
 const options: MenuOption[] = [
@@ -146,15 +150,12 @@ const TeamMembersTable: React.FC<TeamMembersTableProps> = ({ data }) => {
                                     </Typography>
                                 </TableBodyCell>
                                 <TableBodyCell>
-                                    <Typography
+                                    <JoinedDate
                                         variant="paragraphSM"
                                         weight="medium"
                                     >
-                                        {format(
-                                            toDateObj(teamMember.joinDate),
-                                            "MMM d, yyyy"
-                                        )}
-                                    </Typography>
+                                        {formatAsMMMddYYYY(teamMember.joinDate)}
+                                    </JoinedDate>
                                 </TableBodyCell>
                                 <TableBodyCell>
                                     <Badge

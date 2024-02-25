@@ -68,7 +68,7 @@ export interface TeamMemberUpdate {
     joinDate?: string;
 }
 
-type ProjectStatus = "ACTIVE" | "ONHOLD" | "ARCHIVED" | "COMPLETED";
+export type ProjectStatus = "ACTIVE" | "ONHOLD" | "ARCHIVED" | "COMPLETED";
 type ContributorStatus = "ACTIVE" | "INACTIVE";
 
 export interface ProjectContributor {

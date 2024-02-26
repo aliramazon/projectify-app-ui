@@ -119,7 +119,7 @@ export type PopulateProjectsAction = {
 
 export type ChangeProjectStatusAction = {
     type: Actions.CHANGE_PROJECT_STATUS;
-    payload: ProjectStatus;
+    payload: { id: string; status: ProjectStatus };
 };
 
 export type ActionType =
@@ -136,4 +136,5 @@ export type ActionType =
     | AdminChangeTeamMemberStatusAction
     | AdminUpdateTeamMemberAction
     | AddProjectAction
-    | PopulateProjectsAction;
+    | PopulateProjectsAction
+    | ChangeProjectStatusAction;

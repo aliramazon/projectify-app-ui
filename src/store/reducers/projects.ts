@@ -5,6 +5,7 @@ import {
     AddProjectAction,
     ChangeProjectStatusAction,
     PopulateProjectsAction,
+    UpdateProjectAction,
 } from "../actions";
 import { ProjectState } from "../state";
 
@@ -32,6 +33,15 @@ const projectsReducer = produce((draft: ProjectState, action: ActionType) => {
                 project.status = payload.status;
             }
 
+            return draft;
+        }
+
+        case Actions.UPDATE_PROJECT: {
+            const payload = action.payload as UpdateProjectAction["payload"];
+            draft[payload.id] = {
+                ...draft[payload.id],
+                ...payload.data,
+            };
             return draft;
         }
     }

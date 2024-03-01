@@ -1,7 +1,7 @@
+import { useState } from "react";
 import styled from "styled-components";
 import {
     Badge,
-    BadgeColors,
     Menu,
     MenuOption,
     Typography,
@@ -16,8 +16,9 @@ import {
 import { Scrollable } from "../../components";
 import { ProjectStatus, ProjectWithContributors } from "../../../types";
 import { formatAsMMMddYYYY, formatDeadline } from "../../../utils";
-import { useState } from "react";
+
 import { ChangeProjectStatusModal } from "./ChangeProjectStatusModal";
+import { EditProjectModal } from "./EditProjectModal";
 
 type ProjectsTableProps = {
     data: ProjectWithContributors[];
@@ -116,15 +117,19 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
     const [changeStatusTo, setChangeStatusTo] = useState<ProjectStatus>();
     const [showChangeProjectStatusModal, setShowChangeProjectStatusModal] =
         useState(false);
+    const [showEditProjectModal, setShowEditProjectModal] = useState(false);
 
     const handleOnSelectCellMenu = (
         projectId: string,
-        value: ProjectStatus
+        value: ProjectStatus | "edit"
     ) => {
         setSelectedProjectId(projectId);
         if (statuses.includes(value)) {
             setShowChangeProjectStatusModal(true);
-            setChangeStatusTo(value);
+            setChangeStatusTo(value as ProjectStatus);
+            return;
+        } else if (value === "edit") {
+            setShowEditProjectModal(true);
         }
     };
     return (
@@ -144,7 +149,6 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                     </TableHead>
                     <TableBody>
                         {data.map((project) => {
-                            console.log(project);
                             return (
                                 <TableRow key={project.id} columns={columns}>
                                     <TableBodyCell>
@@ -234,6 +238,12 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                 changeStatusTo={changeStatusTo!}
                 projectId={selectedProjectId}
                 closeModal={() => setShowChangeProjectStatusModal(false)}
+            />
+
+            <EditProjectModal
+                show={showEditProjectModal}
+                closeModal={() => setShowEditProjectModal(false)}
+                projectId={selectedProjectId}
             />
         </>
     );

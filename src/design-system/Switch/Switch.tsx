@@ -31,6 +31,7 @@ const Switch: React.FC<ToggleProps> = ({
     label,
     position,
 }) => {
+    console.log(checked);
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         onSwitch(e.target.checked);
     };
@@ -54,6 +55,7 @@ const Switch: React.FC<ToggleProps> = ({
                 onChange={handleOnChange}
                 id={id}
                 disabled={disabled}
+                checked={checked}
             />
             <div className={trackClassNames}>
                 <div className="switch__thumb">

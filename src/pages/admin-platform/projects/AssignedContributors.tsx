@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import styled from "styled-components";
 import {
     ContributorStatus,
@@ -17,12 +18,12 @@ import { formatAsMMMddYYYY } from "../../../utils";
 import { projectService } from "../../../api";
 import { useStore } from "../../../hooks";
 import { Actions, AdminUpdateProjectContributorStatus } from "../../../store";
-import toast from "react-hot-toast";
 
 type Props = {
     contributors: ProjectContributorType[] | undefined;
     projectId: string;
     closeModal: () => void;
+    showNotAssignedContributors: () => void;
 };
 
 const Header = styled.div`
@@ -65,6 +66,7 @@ const JoinedAt = styled(Typography)`
 `;
 
 const AddButtonWrapper = styled.div`
+    padding: 0 var(--space-16);
     height: 7.2rem;
     display: flex;
     align-items: center;
@@ -97,6 +99,7 @@ const AssignedContributors: React.FC<Props> = ({
     projectId,
     contributors,
     closeModal,
+    showNotAssignedContributors,
 }) => {
     const { dispatch } = useStore();
 
@@ -181,7 +184,14 @@ const AssignedContributors: React.FC<Props> = ({
                     })}
             </Contributors>
             <AddButtonWrapper>
-                <Button variant="contained" shape="rounded" color="primary">
+                <Button
+                    onClick={showNotAssignedContributors}
+                    variant="contained"
+                    shape="rounded"
+                    color="primary"
+                    size="lg"
+                    fullWidth
+                >
                     Add Contriibutor
                 </Button>
             </AddButtonWrapper>

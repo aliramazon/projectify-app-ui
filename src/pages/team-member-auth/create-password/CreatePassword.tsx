@@ -37,7 +37,7 @@ const CreatePassword = () => {
     const createPassword = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const inviteToken = searchParams.get("inviteToken");
-        console.log(inviteToken);
+
         teamMemberService
             .createPassword(
                 { email, password, passwordConfirm },

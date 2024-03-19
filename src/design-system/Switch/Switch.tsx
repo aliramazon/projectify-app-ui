@@ -31,7 +31,6 @@ const Switch: React.FC<ToggleProps> = ({
     label,
     position,
 }) => {
-    console.log(checked);
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         onSwitch(e.target.checked);
     };

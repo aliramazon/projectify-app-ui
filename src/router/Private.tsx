@@ -71,8 +71,6 @@ const Private: React.FC<ProtectedRouteProps> = ({ component, userType }) => {
         return component;
     }
 
-    console.log("I am runnning");
-
     return <Navigate to="../" />;
 };
 

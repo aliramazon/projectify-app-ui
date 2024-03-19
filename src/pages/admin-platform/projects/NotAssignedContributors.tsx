@@ -1,14 +1,18 @@
 import toast from "react-hot-toast";
 import styled from "styled-components";
-import { ProjectContributor as ProjectContributorType } from "../../../types";
+import { ProjectContributorBase } from "../../../types";
 import { Button, Checkbox, Icon, Typography } from "../../../design-system";
 import { Scrollable } from "../../components";
 import { ProjectContributor } from "./ProjectContributor";
 import { useState } from "react";
+import { projectService } from "../../../api";
+import { Actions, AdminUpdateProjectContributorsList } from "../../../store";
+import { useStore } from "../../../hooks";
 
 type Props = {
     goBack: () => void;
-    notAssignedContributors: ProjectContributorType[] | undefined;
+    notAssignedContributors: ProjectContributorBase[];
+    projectId: string;
 };
 
 const Header = styled.div`
@@ -52,15 +56,18 @@ const Contributors = styled(Scrollable)`
 const NotAssignedContributors: React.FC<Props> = ({
     goBack,
     notAssignedContributors,
+    projectId,
 }) => {
     const [selectedTeamMembers, setSelectedTeamMembers] = useState(() => {
-        return notAssignedContributors?.map((teamMember) => {
+        return notAssignedContributors.map((teamMember) => {
             return {
                 checked: false,
                 id: teamMember.id,
             };
         });
     });
+
+    const { dispatch } = useStore();
 
     const handleTeamMemberSelect = (value: boolean, idx: number) => {
         setSelectedTeamMembers((prevState) => {
@@ -70,6 +77,31 @@ const NotAssignedContributors: React.FC<Props> = ({
             }
             return copy;
         });
+    };
+
+    const addContributors = () => {
+        const teamMemberIds = selectedTeamMembers
+            ?.filter((teamMember) => teamMember.checked)
+            .map((teamMember) => teamMember.id);
+        if (!teamMemberIds?.length) return;
+
+        projectService
+            .addContributors(teamMemberIds, projectId)
+            .then((data) => {
+                const action: AdminUpdateProjectContributorsList = {
+                    type: Actions.ADMIN_UPDATE_PROJECT_CONTRIBUTORS_LIST,
+                    payload: {
+                        id: projectId,
+                        newContributors: data,
+                    },
+                };
+                dispatch(action);
+                goBack();
+            })
+            .catch((e) => {
+                const err = e as Error;
+                toast.error(err.message);
+            });
     };
 
     const isConfirmButtonDisabled =
@@ -89,7 +121,7 @@ const NotAssignedContributors: React.FC<Props> = ({
                     selectedTeamMembers &&
                     notAssignedContributors.map((teamMember, idx) => {
                         return (
-                            <ContributorBase>
+                            <ContributorBase key={teamMember.id}>
                                 <Checkbox
                                     checked={selectedTeamMembers[idx].checked}
                                     shape="rounded"
@@ -108,13 +140,13 @@ const NotAssignedContributors: React.FC<Props> = ({
             </Contributors>
             <ConfirmButtonWrapper>
                 <Button
-                    onClick={() => {}}
                     variant="contained"
                     shape="rounded"
                     color="primary"
                     size="lg"
                     fullWidth
                     disabled={isConfirmButtonDisabled}
+                    onClick={addContributors}
                 >
                     Confirm
                 </Button>

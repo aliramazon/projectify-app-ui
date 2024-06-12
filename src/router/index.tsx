@@ -19,6 +19,7 @@ import {
     TeamMemberCreatePassword,
     TeamMemberPlatform,
     TeamMemberPersonalTasks,
+    AdminAccountActivation,
 } from "../pages";
 import { UserRole } from "../types";
 import { Private } from "./Private";
@@ -28,6 +29,15 @@ export const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path="/" element={<App />} />
+            <Route
+                path="admin/activate-account"
+                element={
+                    <Auth
+                        userType={UserRole.admin}
+                        component={<AdminAccountActivation />}
+                    />
+                }
+            ></Route>
             <Route
                 path="admin/sign-up"
                 element={

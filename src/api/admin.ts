@@ -134,6 +134,22 @@ class Admin {
             throw error;
         }
     }
+
+    async activateAccount(token: string) {
+        try {
+            const response = await fetch(
+                `${this.url}/activate-account?activationToken=${token}`
+            );
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.message);
+            }
+
+            return response.json();
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 export const adminService = new Admin();

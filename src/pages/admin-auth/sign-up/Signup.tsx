@@ -199,13 +199,12 @@ const Signup = () => {
                         Sign Up
                     </SubmitButton>
                 </Form>
-                <div style={{ marginTop: "auto" }}>
-                    <AuthActionLink
-                        linkText="Sign In"
-                        hintText="Already have an account?"
-                        linkTo="../admin/sign-in"
-                    />
-                </div>
+
+                <AuthActionLink
+                    linkText="Sign In"
+                    hintText="Already have an account?"
+                    linkTo="../admin/sign-in"
+                />
             </AuthWrapper>
             <Toaster />
         </>

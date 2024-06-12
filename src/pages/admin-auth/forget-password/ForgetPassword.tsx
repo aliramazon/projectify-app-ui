@@ -2,7 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import styled from "styled-components";
 import { Button, Input, Toaster } from "../../../design-system";
-import { AuthWrapper } from "../../components";
+import { AuthActionLink, AuthWrapper } from "../../components";
 import { adminService } from "../../../api";
 import pageImg from "../../../assets/images/auth-page.jpg";
 
@@ -37,7 +37,7 @@ const ForgetPassword = () => {
         <>
             <AuthWrapper
                 imageUrl={pageImg}
-                pageTitle="Forget Password"
+                pageTitle="Forget Password ?"
                 switchLayout
             >
                 <Form onSubmit={getInstructions}>
@@ -59,6 +59,12 @@ const ForgetPassword = () => {
                         Get Instructions
                     </Button>
                 </Form>
+
+                <AuthActionLink
+                    linkText="Sign In"
+                    hintText="Remember your password?"
+                    linkTo="../admin/sign-in"
+                />
             </AuthWrapper>
             <Toaster />
         </>

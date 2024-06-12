@@ -2,7 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import styled from "styled-components";
 import { Button, Input } from "../../../design-system";
-import { AuthWrapper } from "../../components";
+import { AuthActionLink, AuthWrapper } from "../../components";
 import pageImg from "../../../assets/images/auth-page.jpg";
 
 const Form = styled.form`
@@ -24,7 +24,7 @@ const ForgetPassword = () => {
     return (
         <AuthWrapper
             imageUrl={pageImg}
-            pageTitle="Forget Password"
+            pageTitle="Forget Password ?"
             switchLayout
         >
             <Form onSubmit={getInstructions}>
@@ -41,6 +41,11 @@ const ForgetPassword = () => {
                     Get Instructions
                 </Button>
             </Form>
+            <AuthActionLink
+                linkText="Sign In"
+                hintText="Remember your password?"
+                linkTo="../team-member/sign-in"
+            />
         </AuthWrapper>
     );
 };

@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import styled from "styled-components";
+import toast from "react-hot-toast";
 import { Button, Input } from "../../../design-system";
 import { AuthActionLink, AuthWrapper } from "../../components";
-import styled from "styled-components";
 import { useLocalStorage, useStore } from "../../../hooks";
-
-import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { teamMemberService } from "../../../api";
-import toast from "react-hot-toast";
+import pageImg from "../../../assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;
@@ -65,7 +64,7 @@ const Signin = () => {
     };
 
     return (
-        <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
+        <AuthWrapper imageUrl={pageImg} pageTitle="Sign In">
             <Form onSubmit={signIn}>
                 <Input
                     type="email"

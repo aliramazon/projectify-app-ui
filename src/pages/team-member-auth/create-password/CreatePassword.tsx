@@ -1,11 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
-import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
 import { teamMemberService } from "../../../api";
-import toast from "react-hot-toast";
+import pageImg from "../../../assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;
@@ -53,11 +53,7 @@ const CreatePassword = () => {
     };
 
     return (
-        <AuthWrapper
-            imageUrl={brooklynBridge}
-            pageTitle="Create Password"
-            switchLayout
-        >
+        <AuthWrapper imageUrl={pageImg} pageTitle="Create Password">
             <Form onSubmit={createPassword}>
                 <Input
                     type="password"

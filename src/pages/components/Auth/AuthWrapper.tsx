@@ -50,7 +50,7 @@ const AuthImage = styled.img.attrs({
     transition: all 1s;
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.01);
     }
 `;
 

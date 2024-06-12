@@ -6,7 +6,7 @@ import { Button, Input, Toaster } from "../../../design-system";
 import { AuthActionLink, AuthWrapper } from "../../components";
 import { adminService } from "../../../api";
 
-import flatIronBuilding from "../../../assets/images/flat-iron-building.jpg";
+import pageImg from "../../../assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;
@@ -115,7 +115,7 @@ const Signup = () => {
 
     return (
         <>
-            <AuthWrapper imageUrl={flatIronBuilding} pageTitle="Sign Up">
+            <AuthWrapper imageUrl={pageImg} pageTitle="Sign Up">
                 <Form onSubmit={createAccount}>
                     <Input
                         type="text"

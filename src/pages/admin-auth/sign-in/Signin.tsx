@@ -5,7 +5,7 @@ import { AuthActionLink, AuthWrapper } from "../../components";
 import styled from "styled-components";
 import { useLocalStorage } from "../../../hooks";
 
-import brooklynBridge from "../../../assets/images/brooklyn-bridge.jpg";
+import pageImg from "../../../assets/images/auth-page.jpg";
 import { adminService } from "../../../api";
 import toast from "react-hot-toast";
 
@@ -64,7 +64,7 @@ const Signin = () => {
     };
 
     return (
-        <AuthWrapper imageUrl={brooklynBridge} pageTitle="Sign In">
+        <AuthWrapper imageUrl={pageImg} pageTitle="Sign In">
             <Form onSubmit={signIn}>
                 <Input
                     type="email"

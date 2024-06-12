@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import styled from "styled-components";
 import { Button, Input } from "../../../design-system";
 import { AuthWrapper } from "../../components";
-import manhattanStreet from "../../../assets/images/manhattan-street.jpg";
+import pageImg from "../../../assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;
@@ -23,7 +23,7 @@ const ForgetPassword = () => {
     };
     return (
         <AuthWrapper
-            imageUrl={manhattanStreet}
+            imageUrl={pageImg}
             pageTitle="Forget Password"
             switchLayout
         >

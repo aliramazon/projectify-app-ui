@@ -57,7 +57,7 @@ const EditProjectModal: React.FC<EditProjectModalProps> = ({
             setStartDate(toDateObj(project.startDate));
             setEndDate(toDateObj(project.endDate));
         }
-    }, [projectId]);
+    }, [projectId, show]);
 
     const onChangeName = (value: string) => {
         setName(value);

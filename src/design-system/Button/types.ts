@@ -1,9 +1,12 @@
+import { To } from "react-router-dom";
+
 export type ButtonSize = "sm" | "md" | "lg";
 export type ButtonShape = "rounded" | "circle";
 export type ButtonColor = "primary" | "secondary" | "danger" | "success";
 export type ButtonVariant = "contained" | "outlined" | "text";
+export type RenderableAs = "link" | "navLink";
 
-export type ButtonProps = {
+interface ButtonBaseProps {
     size?: ButtonSize;
     shape?: ButtonShape;
     fullWidth?: boolean;
@@ -13,5 +16,8 @@ export type ButtonProps = {
     className?: string;
     children: React.ReactNode;
     onClick?: () => void;
-    buttonRef?: React.ForwardedRef<HTMLButtonElement>;
-};
+}
+
+export type ButtonProps =
+    | (ButtonBaseProps & { renderAs: RenderableAs; navigateTo: To })
+    | (ButtonBaseProps & { renderAs?: never; navigateTo?: never });

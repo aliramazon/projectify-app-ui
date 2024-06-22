@@ -56,6 +56,8 @@ export const TopNavigation = () => {
                         color="primary"
                         size="sm"
                         shape="rounded"
+                        renderAs="link"
+                        navigateTo="admin/sign-up"
                     >
                         Sign up
                     </Button>
@@ -64,6 +66,8 @@ export const TopNavigation = () => {
                         color="primary"
                         size="sm"
                         shape="rounded"
+                        renderAs="link"
+                        navigateTo="admin/sign-in"
                     >
                         Login
                     </Button>

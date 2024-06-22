@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Container } from "../../components";
-import { Button, Logo } from "../../../../design-system";
+import { Container } from "../../../components";
+import { Button, Logo } from "../../../../../../src/design-system";
 
 const TopNavigationBase = styled.nav`
     background-color: var(--primary-12);
@@ -25,7 +25,6 @@ const NavLinks = styled.div`
 export const TopNavigation = () => {
     return (
         <TopNavigationBase>
-            {" "}
             <Container>
                 <NavigationLayout>
                     <Logo layout="horizontal" size="sm" />

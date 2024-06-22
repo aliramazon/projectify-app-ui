@@ -1,12 +1,7 @@
-import { Link } from "react-router-dom";
-import { TopNavigation } from "./pages/landing/sections";
+import { Home } from "./pages/landing";
 
 const App = () => {
-    return (
-        <>
-            <TopNavigation />z
-        </>
-    );
+    return <Home />;
 };
 
 export { App };

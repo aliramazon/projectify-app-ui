@@ -33,7 +33,7 @@ export const TopNavigation = () => {
                             variant="text"
                             size="sm"
                             color="secondary"
-                            shape="rounded"
+                            shape="circle"
                         >
                             About
                         </Button>
@@ -41,7 +41,7 @@ export const TopNavigation = () => {
                             variant="text"
                             size="sm"
                             color="secondary"
-                            shape="rounded"
+                            shape="circle"
                         >
                             Testimonials
                         </Button>
@@ -49,7 +49,7 @@ export const TopNavigation = () => {
                             variant="text"
                             size="sm"
                             color="secondary"
-                            shape="rounded"
+                            shape="circle"
                         >
                             Contact
                         </Button>
@@ -59,7 +59,7 @@ export const TopNavigation = () => {
                             variant="outlined"
                             color="primary"
                             size="sm"
-                            shape="rounded"
+                            shape="circle"
                             renderAs="link"
                             navigateTo="admin/sign-up"
                         >
@@ -69,7 +69,7 @@ export const TopNavigation = () => {
                             variant="contained"
                             color="primary"
                             size="sm"
-                            shape="rounded"
+                            shape="circle"
                             renderAs="link"
                             navigateTo="admin/sign-in"
                         >

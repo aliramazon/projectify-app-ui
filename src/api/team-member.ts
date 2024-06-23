@@ -43,7 +43,7 @@ class TeamMemberService {
             const response = await fetch(`${this.url}`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                     authorization: `Bearer ${authToken}`,
                 },
                 body: JSON.stringify(input),
@@ -84,7 +84,7 @@ class TeamMemberService {
             const response = await fetch(`${this.url}/login`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -124,7 +124,7 @@ class TeamMemberService {
             const response = await fetch(`${this.url}/create-password`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                     authorization: `Bearer ${inviteToken}`,
                 },
                 body: JSON.stringify(input),
@@ -194,7 +194,7 @@ class TeamMemberService {
                 method: "PATCH",
                 headers: {
                     authorization: `Bearer ${authToken}`,
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                 },
                 body: JSON.stringify(updateData),
             });

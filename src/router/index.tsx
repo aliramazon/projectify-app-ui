@@ -20,7 +20,7 @@ import {
     TeamMemberPlatform,
     TeamMemberPersonalTasks,
     AdminAccountActivation,
-} from "app-pages";
+} from "application";
 import { UserRole } from "types";
 import { Private } from "./Private";
 import { Auth } from "./Auth";

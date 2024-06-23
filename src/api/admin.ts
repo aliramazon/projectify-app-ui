@@ -31,7 +31,7 @@ class Admin {
             const response = await fetch(`${this.url}/sign-up`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -50,7 +50,7 @@ class Admin {
             const response = await fetch(`${this.url}/login`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -70,7 +70,7 @@ class Admin {
             const response = await fetch(`${this.url}/forgot-password`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                 },
                 body: JSON.stringify({
                     email,
@@ -96,7 +96,7 @@ class Admin {
             const response = await fetch(`${this.url}/reset-password`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "app-pageslication/json",
+                    "Content-Type": "applicationlication/json",
                     authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify({

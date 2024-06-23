@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../../../components";
+import { Container } from "marketing/components";
 import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`

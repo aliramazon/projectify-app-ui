@@ -16,7 +16,7 @@ const HeroContent = styled.div`
 
 const HeroSubtext = styled(Typography)`
     color: var(--jaguar-500);
-    max-width: 70rem;
+    max-width: 65rem;
     margin-top: var(--space-20);
     margin-bottom: var(--space-30);
 `;

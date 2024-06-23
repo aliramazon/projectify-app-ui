@@ -31,7 +31,7 @@ class Admin {
             const response = await fetch(`${this.url}/sign-up`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "applicationlication/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -46,11 +46,12 @@ class Admin {
     }
 
     async signIn(input: SignInInput): Promise<{ token: string }> {
+        console.log(input);
         try {
             const response = await fetch(`${this.url}/login`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "applicationlication/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -70,7 +71,7 @@ class Admin {
             const response = await fetch(`${this.url}/forgot-password`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "applicationlication/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     email,
@@ -96,7 +97,7 @@ class Admin {
             const response = await fetch(`${this.url}/reset-password`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "applicationlication/json",
+                    "Content-Type": "application/json",
                     authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify({

@@ -35,7 +35,15 @@ export const TopNavigation = () => {
                             color="secondary"
                             shape="circle"
                         >
-                            About
+                            Features
+                        </Button>
+                        <Button
+                            variant="text"
+                            size="sm"
+                            color="secondary"
+                            shape="circle"
+                        >
+                            Pricing
                         </Button>
                         <Button
                             variant="text"
@@ -44,14 +52,6 @@ export const TopNavigation = () => {
                             shape="circle"
                         >
                             Testimonials
-                        </Button>
-                        <Button
-                            variant="text"
-                            size="sm"
-                            color="secondary"
-                            shape="circle"
-                        >
-                            Contact
                         </Button>
                     </NavLinks>
                     <AuthLinks>

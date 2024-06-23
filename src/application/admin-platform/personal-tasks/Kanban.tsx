@@ -65,9 +65,7 @@ const Kanban: React.FC<KanbanProps> = ({ groupedTasks }) => {
 
     const { dispatch } = useStore();
     const onDrop = (e: React.DragEvent<HTMLDivElement>, status: TaskStatus) => {
-        const task = JSON.parse(
-            e.dataTransfer.getData("applicationlication/json")
-        );
+        const task = JSON.parse(e.dataTransfer.getData("application/json"));
 
         adminTasksService
             .updateTask(task.id, { status: status })

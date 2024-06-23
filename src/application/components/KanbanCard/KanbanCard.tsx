@@ -65,10 +65,7 @@ const KanbanCard: React.FC<KanbanCardProps> = ({
 
     const onDragStart = (e: React.DragEvent<HTMLDivElement>) => {
         setIsDragging(true);
-        e.dataTransfer.setData(
-            "applicationlication/json",
-            JSON.stringify(task)
-        );
+        e.dataTransfer.setData("application/json", JSON.stringify(task));
     };
 
     const onDragEnd = (e: React.DragEvent<HTMLDivElement>) => {

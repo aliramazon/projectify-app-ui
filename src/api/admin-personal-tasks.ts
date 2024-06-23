@@ -26,7 +26,7 @@ class AdminPersonalTasks {
             const response = await fetch(`${this.url}/tasks`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "app-pageslication/json",
                     authorization: `Bearer ${authToken}`,
                 },
                 body: JSON.stringify(input),
@@ -89,7 +89,7 @@ class AdminPersonalTasks {
             const response = await fetch(`${this.url}/tasks/${taskId}`, {
                 method: "PATCH",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "app-pageslication/json",
                     authorization: `Bearer ${authToken}`,
                 },
                 body: JSON.stringify(input),

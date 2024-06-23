@@ -47,7 +47,7 @@ class ProjectService {
                 method: "POST",
                 headers: {
                     authorization: `Bearer ${authToken}`,
-                    "Content-Type": "application/json",
+                    "Content-Type": "app-pageslication/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -91,7 +91,7 @@ class ProjectService {
                     method: "PATCH",
                     headers: {
                         authorization: `Bearer ${authToken}`,
-                        "Content-Type": "application/json",
+                        "Content-Type": "app-pageslication/json",
                     },
                     body: JSON.stringify({ status }),
                 }
@@ -114,7 +114,7 @@ class ProjectService {
                 method: "PATCH",
                 headers: {
                     authorization: `Bearer ${authToken}`,
-                    "Content-Type": "application/json",
+                    "Content-Type": "app-pageslication/json",
                 },
                 body: JSON.stringify(input),
             });
@@ -168,7 +168,7 @@ class ProjectService {
                     method: "PATCH",
                     headers: {
                         authorization: `Bearer ${authToken}`,
-                        "Content-Type": "application/json",
+                        "Content-Type": "app-pageslication/json",
                     },
                     body: JSON.stringify({ status }),
                 }
@@ -196,7 +196,7 @@ class ProjectService {
                     method: "POST",
                     headers: {
                         authorization: `Bearer ${authToken}`,
-                        "Content-Type": "application/json",
+                        "Content-Type": "app-pageslication/json",
                     },
                     body: JSON.stringify({ teamMemberId }),
                 }

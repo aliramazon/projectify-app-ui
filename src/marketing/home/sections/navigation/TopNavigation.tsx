@@ -4,6 +4,7 @@ import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`
     background-color: var(--primary-12);
+    padding: 0 var(--space-30);
 `;
 const NavigationLayout = styled.div`
     height: 7.2rem;

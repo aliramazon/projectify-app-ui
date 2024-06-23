@@ -5,6 +5,7 @@ import heroImg from "assets/images/hero.png";
 
 const HeroBase = styled.header`
     background-color: var(--primary-12);
+    padding: 0 var(--space-30);
 `;
 
 const HeroContent = styled.div`
@@ -27,7 +28,7 @@ const DemoButton = styled(Button)`
 
 const HeroImg = styled.img`
     width: 100%;
-    transform: translateX(-2rem);
+    transform: translateX(-1rem);
 `;
 
 export const Hero = () => {
@@ -51,6 +52,7 @@ export const Hero = () => {
                     >
                         Try a Demo
                     </DemoButton>
+
                     <HeroImg src={heroImg} alt="Projectify Kanban Board" />
                 </HeroContent>
             </Container>

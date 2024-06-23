@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { Modal } from "../../../design-system";
-import { projectService } from "../../../api";
-import { useStore } from "../../../hooks";
-import {
-    Actions,
-    AdminPopulateProjectContributorsAction,
-} from "../../../store";
 import toast from "react-hot-toast";
+import { Modal } from "design-system";
+import { projectService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminPopulateProjectContributorsAction } from "store";
 import { AssignedContributors } from "./AssignedContributors";
 import { NotAssignedContributors } from "./NotAssignedContributors";
 

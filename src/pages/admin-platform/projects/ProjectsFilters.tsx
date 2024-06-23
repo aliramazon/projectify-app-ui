@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Option, Select } from "../../../design-system";
-import { PageFilters } from "../../components";
+import { Option, Select } from "design-system";
+import { PageFilters } from "pages/components";
 
 type ProjectsFiltersProps = {
     selectedStatus: string;

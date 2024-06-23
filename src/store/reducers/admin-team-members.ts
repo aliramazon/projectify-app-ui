@@ -1,5 +1,4 @@
 import { produce } from "immer";
-import { TeamMemberState } from "../state";
 import {
     ActionType,
     Actions,
@@ -8,7 +7,8 @@ import {
     AdminRemoveTeamMemberAction,
     AdminChangeTeamMemberStatusAction,
     AdminUpdateTeamMemberAction,
-} from "../actions";
+} from "store/actions";
+import { TeamMemberState } from "store/state";
 
 const adminTeamMembersReducer = produce(
     (draft: TeamMemberState, action: ActionType) => {

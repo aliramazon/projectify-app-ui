@@ -1,18 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
 import toast from "react-hot-toast";
-import {
-    Typography,
-    Modal,
-    Input,
-    DatePickerV1,
-    Button,
-} from "../../../design-system";
+import { Typography, Modal, Input, DatePickerV1, Button } from "design-system";
 
-import { adminTasksService } from "../../../api";
-import { useStore } from "../../../hooks";
-import { Actions, AdminAddTaskAction } from "../../../store";
-import { toIso8601 } from "../../../utils";
+import { adminTasksService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminAddTaskAction } from "store";
+import { toIso8601 } from "utils";
 
 type CreateTaskModalProps = {
     show: boolean;

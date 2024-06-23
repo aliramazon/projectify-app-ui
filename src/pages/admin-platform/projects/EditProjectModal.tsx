@@ -1,19 +1,13 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import toast from "react-hot-toast";
 
-import {
-    Input,
-    Button,
-    Typography,
-    DatePickerV1,
-    Modal,
-} from "../../../design-system";
-import { useEffect, useState } from "react";
-import { projectService } from "../../../api";
-import { toDateObj, toIso8601 } from "../../../utils";
-import { useStore } from "../../../hooks";
-import { Actions, AdminUpdateProjectAction } from "../../../store";
-import { ProjectUpdate } from "../../../types";
+import { Input, Button, Typography, DatePickerV1, Modal } from "design-system";
+import { projectService } from "api";
+import { toDateObj, toIso8601 } from "utils";
+import { useStore } from "hooks";
+import { Actions, AdminUpdateProjectAction } from "store";
+import { ProjectUpdate } from "types";
 
 type EditProjectModalProps = {
     show: boolean;

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
-import { NoDataPlaceholder, PageHeader } from "../../components";
-import { adminTasksService } from "../../../api";
-import { useStore } from "../../../hooks";
-import { Actions, AdminPopulateTasksAction } from "../../../store";
-import { groupTasksByStatus } from "../../../utils";
+import { NoDataPlaceholder, PageHeader } from "pages/components";
+import { adminTasksService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminPopulateTasksAction } from "store";
+import { groupTasksByStatus } from "utils";
 import { CreateTaskModal } from "./CreateTaskModal";
 import { Kanban } from "./Kanban";
 
-import noTask from "../../../assets/illustrations/no-task.svg";
+import noTask from "assets/illustrations/no-task.svg";
 import toast from "react-hot-toast";
 
 const AdminTasksPage = () => {

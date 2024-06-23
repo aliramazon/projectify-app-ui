@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import format from "date-fns/format";
 import {
     Badge,
     BadgeColors,
@@ -13,18 +12,17 @@ import {
     TableHead,
     TableHeadCell,
     TableRow,
-} from "../../../design-system";
-
+} from "design-system";
 import {
     TeamMember,
     AdminTeamMemberActions,
     AdminTeamMemberStatusChange,
-} from "../../../types";
+} from "types";
+import { formatAsMMMddYYYY } from "utils";
+import { Scrollable } from "pages/components";
 import { DeleteTeamMemberModal } from "./DeleteTeamMemberModal";
 import { ChangeTeamMemberStatusModal } from "./ChangeTeamMemberStatusModal";
 import { EditTeamMemberModal } from "./EditTeamMemberModal";
-import { formatAsMMMddYYYY } from "../../../utils";
-import { Scrollable } from "../../components";
 
 type TeamMembersTableProps = {
     data: TeamMember[];

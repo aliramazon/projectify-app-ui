@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { NoDataPlaceholder, PageHeader } from "../../components";
-import { Option } from "../../../design-system";
-import { useStore } from "../../../hooks";
-import { projectService } from "../../../api";
-import { Actions, AdminPopulateProjectsAction } from "../../../store";
+import { Option } from "design-system";
+import { useStore } from "hooks";
+import { projectService } from "api";
+import { Actions, AdminPopulateProjectsAction } from "store";
+import { ProjectStatus } from "types";
+import { NoDataPlaceholder, PageHeader } from "pages/components";
 import { CreateProjectModal } from "./CreateProjectModal";
 import { ProjectsFilters } from "./ProjectsFilters";
-import { ProjectStatus } from "../../../types";
-import noProject from "../../../assets/illustrations/no-project.svg";
 import { ProjectsTable } from "./ProjectsTable";
+import noProject from "assets/illustrations/no-project.svg";
 
 const AdminProjectsPage = () => {
     const [showCreateProjectModal, setShowCreateProjectModal] = useState(false);

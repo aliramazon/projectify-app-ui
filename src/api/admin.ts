@@ -1,4 +1,4 @@
-import { AdminUser } from "../types";
+import { AdminUser } from "types";
 
 type SignUpInput = {
     firstName: string;

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import { NoDataPlaceholder } from "../../components";
+import { NoDataPlaceholder } from "pages/components";
 import { CreateTeamMemberModal } from "./CreateTeamMemberModal";
-import noTeamMember from "../../../assets/illustrations/no-team-member.svg";
-import { useStore } from "../../../hooks";
-import { teamMemberService } from "../../../api";
-import { Actions, AdminPopulateTeamMembersAction } from "../../../store";
+import noTeamMember from "assets/illustrations/no-team-member.svg";
+import { useStore } from "hooks";
+import { teamMemberService } from "api";
+import { Actions, AdminPopulateTeamMembersAction } from "store";
 import toast from "react-hot-toast";
-import { PageHeader } from "../../components/";
+import { PageHeader } from "pages/components/";
 import { TeamMemberFilters } from "./TeamMemberFilters";
 import { TeamMembersTable } from "./TeamMembersTable";
-import { Option } from "../../../design-system";
-import { TeamMemberStatus } from "../../../types";
+import { Option } from "design-system";
+import { TeamMemberStatus } from "types";
 
 const AdminTeamMembersPage = () => {
     const [showCreateTeamMemberModal, setShowCreateTeamMemberModal] =

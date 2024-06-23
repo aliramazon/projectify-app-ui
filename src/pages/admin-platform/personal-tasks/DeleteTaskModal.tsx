@@ -1,7 +1,7 @@
-import { adminTasksService } from "../../../api";
-import { useStore } from "../../../hooks";
-import { Actions, AdminRemoveTaskAction } from "../../../store";
-import { ConfirmationModal } from "../../components";
+import { adminTasksService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminRemoveTaskAction } from "store";
+import { ConfirmationModal } from "pages/components";
 
 type DeleteTaskModalProps = {
     show: boolean;

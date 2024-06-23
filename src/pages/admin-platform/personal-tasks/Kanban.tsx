@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import toast from "react-hot-toast";
-import { GroupedTasks } from "../../../utils";
-import { useStore } from "../../../hooks";
-import { Actions, AdminChangeTaskStatusAction } from "../../../store";
-import { adminTasksService } from "../../../api";
-import { Typography } from "../../../design-system";
-import { TaskStatus } from "../../../types";
-import { KanbanCard, KanbanCardBase, Scrollable } from "../../components";
+import { Typography } from "design-system";
+import { GroupedTasks } from "utils";
+import { useStore } from "hooks";
+import { Actions, AdminChangeTaskStatusAction } from "store";
+import { adminTasksService } from "api";
+import { TaskStatus } from "types";
+import { KanbanCard, KanbanCardBase, Scrollable } from "pages/components";
 import { EditTaskModal } from "./EditTaskModal";
 import { DeleteTaskModal } from "./DeleteTaskModal";
 

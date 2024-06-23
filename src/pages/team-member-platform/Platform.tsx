@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { SideBar, SideBarLinks, SideBarLinksGroup } from "../../design-system";
-import { AppPage, AppLayout, SideBarUser } from "../components";
 import { useNavigate } from "react-router-dom";
-import { useLocalStorage, useStore } from "../../hooks";
+import { SideBar, SideBarLinks, SideBarLinksGroup } from "design-system";
+import { useLocalStorage, useStore } from "hooks";
+import { AppPage, AppLayout, SideBarUser } from "pages/components";
 
 import { Actions } from "../../store";
 

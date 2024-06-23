@@ -1,18 +1,12 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import toast from "react-hot-toast";
-import {
-    Typography,
-    Modal,
-    Input,
-    DatePickerV1,
-    Button,
-} from "../../../design-system";
+import { Typography, Modal, Input, DatePickerV1, Button } from "design-system";
 
-import { useStore } from "../../../hooks";
-import { Actions, AdminUpdateTeamMemberAction } from "../../../store";
-import { teamMemberService } from "../../../api";
-import { toDateObj, toIso8601 } from "../../../utils";
+import { useStore } from "hooks";
+import { Actions, AdminUpdateTeamMemberAction } from "store";
+import { teamMemberService } from "api";
+import { toDateObj, toIso8601 } from "utils";
 
 type ModalProps = {
     show: boolean;

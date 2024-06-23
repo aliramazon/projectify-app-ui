@@ -2,10 +2,10 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { Button, Input } from "../../../design-system";
-import { AuthWrapper } from "../../components";
-import { teamMemberService } from "../../../api";
-import pageImg from "../../../assets/images/auth-page.jpg";
+import { Button, Input } from "design-system";
+import { teamMemberService } from "api";
+import { AuthWrapper } from "pages/components";
+import pageImg from "assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;

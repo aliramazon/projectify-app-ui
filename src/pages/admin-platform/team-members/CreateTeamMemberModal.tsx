@@ -9,12 +9,11 @@ import {
     Button,
     Select,
     Option,
-} from "../../../design-system";
-
-import { useStore } from "../../../hooks";
-import { Actions, AdminAddTeamMemberAction } from "../../../store";
-import { teamMemberService } from "../../../api";
-import { toIso8601 } from "../../../utils";
+} from "design-system";
+import { teamMemberService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminAddTeamMemberAction } from "store";
+import { toIso8601 } from "utils";
 
 type ModalProps = {
     show: boolean;

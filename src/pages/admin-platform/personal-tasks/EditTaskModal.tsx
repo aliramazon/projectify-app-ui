@@ -9,12 +9,12 @@ import {
     DatePickerV1,
     Select,
     Option,
-} from "../../../design-system";
-import { useStore } from "../../../hooks";
-import { TaskStatus, TaskUpdate } from "../../../types";
-import { adminTasksService } from "../../../api";
-import { Actions, AdminUpdateTaskAction } from "../../../store";
-import { toDateObj, toIso8601 } from "../../../utils";
+} from "design-system";
+import { useStore } from "hooks";
+import { TaskStatus, TaskUpdate } from "types";
+import { adminTasksService } from "api";
+import { Actions, AdminUpdateTaskAction } from "store";
+import { toDateObj, toIso8601 } from "utils";
 
 type EditTaskModalProps = {
     show: boolean;

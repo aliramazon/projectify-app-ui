@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 import {
     Input,
@@ -8,12 +9,11 @@ import {
     DatePickerV1,
     Modal,
     DatePickerOnChangeDateType,
-} from "../../../design-system";
-import { useState } from "react";
-import { projectService } from "../../../api";
-import { toIso8601 } from "../../../utils";
-import { useStore } from "../../../hooks";
-import { Actions, AddProjectAction } from "../../../store";
+} from "design-system";
+import { projectService } from "api";
+import { toIso8601 } from "utils";
+import { useStore } from "hooks";
+import { Actions, AddProjectAction } from "store";
 
 type CreateProjectModalProps = {
     show: boolean;

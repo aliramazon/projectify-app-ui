@@ -1,10 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import styled from "styled-components";
-import { Button, Input, Toaster } from "../../../design-system";
-import { AuthActionLink, AuthWrapper } from "../../components";
-import { adminService } from "../../../api";
-import pageImg from "../../../assets/images/auth-page.jpg";
+import { Button, Input, Toaster } from "design-system";
+import { adminService } from "api";
+import pageImg from "assets/images/auth-page.jpg";
+import { AuthActionLink, AuthWrapper } from "pages/components";
 
 const Form = styled.form`
     width: 100%;

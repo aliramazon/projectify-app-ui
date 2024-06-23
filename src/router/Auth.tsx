@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useLocalStorage } from "../hooks";
-import { UserRole } from "../types";
+import { useLocalStorage } from "hooks";
+import { UserRole } from "types";
 
 type AuthRouteProps = {
     component: React.ReactElement;

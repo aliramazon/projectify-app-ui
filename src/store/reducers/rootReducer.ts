@@ -1,9 +1,9 @@
 import { userReducer } from "./user";
 import { adminTasksReducer } from "./admin-tasks";
-import { GlobalState, initialState } from "../state";
-import { ActionType, Actions } from "../actions";
 import { adminTeamMembersReducer } from "./admin-team-members";
 import { projectsReducer } from "./projects";
+import { GlobalState, initialState } from "store/state";
+import { ActionType, Actions } from "store/actions";
 
 const rootReducer = (state: GlobalState, action: ActionType): GlobalState => {
     if (action.type === Actions.RESET_STATE) {

@@ -1,9 +1,9 @@
 import toast from "react-hot-toast";
-import { teamMemberService } from "../../../api";
-import { useStore } from "../../../hooks";
-import { Actions, AdminChangeTeamMemberStatusAction } from "../../../store";
-import { ConfirmationModal } from "../../components";
-import { AdminTeamMemberStatusChange } from "../../../types";
+import { teamMemberService } from "api";
+import { useStore } from "hooks";
+import { Actions, AdminChangeTeamMemberStatusAction } from "store";
+import { AdminTeamMemberStatusChange } from "types";
+import { ConfirmationModal } from "pages/components";
 
 type ChangeTeamMemberStatusModalProps = {
     show: boolean;

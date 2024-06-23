@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../../components";
-import { Button, Logo } from "../../../../../../src/design-system";
+import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`
     background-color: var(--primary-12);

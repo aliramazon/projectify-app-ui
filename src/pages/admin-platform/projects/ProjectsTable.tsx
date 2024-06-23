@@ -12,10 +12,10 @@ import {
     TableHeadCell,
     TableRow,
     LinearProgress,
-} from "../../../design-system";
-import { Scrollable } from "../../components";
-import { ProjectStatus, ProjectWithContributors } from "../../../types";
-import { formatAsMMMddYYYY, formatDeadline } from "../../../utils";
+} from "design-system";
+import { formatAsMMMddYYYY, formatDeadline } from "utils";
+import { ProjectStatus, ProjectWithContributors } from "types";
+import { Scrollable } from "pages/components";
 
 import { ChangeProjectStatusModal } from "./ChangeProjectStatusModal";
 import { EditProjectModal } from "./EditProjectModal";

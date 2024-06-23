@@ -1,4 +1,4 @@
-import { Task, TaskUpdate } from "../types";
+import { Task, TaskUpdate } from "types";
 
 export type CreateInput = Omit<Task, "id" | "status">;
 

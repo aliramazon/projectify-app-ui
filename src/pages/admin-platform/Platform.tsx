@@ -4,10 +4,10 @@ import {
     SideBarLinks,
     SideBarLinksGroup,
     Toaster,
-} from "../../design-system";
-import { AppPage, AppLayout, SideBarUser } from "../components";
-import { Actions } from "../../store";
-import { useLocalStorage, useStore } from "../../hooks";
+} from "design-system";
+import { AppPage, AppLayout, SideBarUser } from "pages/components";
+import { Actions } from "store";
+import { useLocalStorage, useStore } from "hooks";
 
 const links: SideBarLinksGroup[] = [
     {

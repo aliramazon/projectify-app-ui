@@ -14,7 +14,7 @@ import {
     TeamMemberStatus,
     TeamMemberUpdate,
     TeamMemberUser,
-} from "../../types";
+} from "types";
 
 export enum Actions {
     INIT_USER = "INIT_USER",

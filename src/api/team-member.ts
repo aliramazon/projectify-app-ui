@@ -3,7 +3,7 @@ import {
     TeamMember,
     TeamMemberUpdate,
     TeamMemberUser,
-} from "../types";
+} from "types";
 
 export type GetMeAPIResponse = {
     data: TeamMemberUser;

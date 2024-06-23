@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, ButtonColor, Modal, Typography } from "../../design-system";
+import { Button, ButtonColor, Modal, Typography } from "design-system";
 
 type ConfirmationModalProps = {
     show: boolean;

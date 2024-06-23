@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
     ContributorStatus,
     ProjectContributor as ProjectContributorType,
-} from "../../../types";
+} from "types";
 import {
     Badge,
     BadgeColors,
@@ -11,13 +11,13 @@ import {
     Icon,
     Switch,
     Typography,
-} from "../../../design-system";
-import { Scrollable } from "../../components";
+} from "design-system";
+import { Actions, AdminUpdateProjectContributorStatus } from "store";
+import { Scrollable } from "pages/components";
+import { projectService } from "api";
+import { formatAsMMMddYYYY } from "utils";
+import { useStore } from "hooks";
 import { ProjectContributor } from "./ProjectContributor";
-import { formatAsMMMddYYYY } from "../../../utils";
-import { projectService } from "../../../api";
-import { useStore } from "../../../hooks";
-import { Actions, AdminUpdateProjectContributorStatus } from "../../../store";
 
 type Props = {
     contributors: ProjectContributorType[] | undefined;

@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Avatar } from "../../../design-system/Avatar";
-import { Typography } from "../../../design-system";
+import { Typography, Avatar } from "design-system";
 
 type ProjectContributorDetails = {
     firstName: string;

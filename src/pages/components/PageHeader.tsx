@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button, Typography } from "../../design-system";
+import { Button, Typography } from "design-system";
 
 type PageHeaderProps = {
     pageTitle: string;

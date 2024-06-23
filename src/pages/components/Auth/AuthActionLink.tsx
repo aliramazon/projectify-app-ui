@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Typography } from "../../../design-system";
-import React from "react";
+import { Typography } from "design-system";
 
 type PropsType = {
     linkText: string;

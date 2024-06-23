@@ -6,7 +6,7 @@ import {
     ProjectStatus,
     ProjectUpdate,
     ProjectWithContributors,
-} from "../types";
+} from "types";
 
 type CreateInput = Omit<Project, "id" | "status" | "progress">;
 

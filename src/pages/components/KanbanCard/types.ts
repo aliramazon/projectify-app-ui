@@ -1,5 +1,5 @@
-import { MenuOption } from "../../../design-system";
-import { Task } from "../../../types";
+import { MenuOption } from "design-system";
+import { Task } from "types";
 
 export type KanbanCardProps = {
     task: Task;

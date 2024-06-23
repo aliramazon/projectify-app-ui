@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Avatar } from "../../design-system/Avatar";
-import { Icon, Typography } from "../../design-system";
+import { Icon, Typography, Avatar } from "../../design-system";
 
 const UserBase = styled.div`
     width: calc(100% - 1.6rem);

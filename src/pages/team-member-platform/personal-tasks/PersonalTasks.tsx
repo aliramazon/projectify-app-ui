@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Input, Modal, Typography, Button } from "../../../design-system";
-import { NoDataPlaceholder } from "../../components";
-import noTask from "../../../assets/illustrations/no-task.svg";
+import { Input, Modal, Typography, Button } from "design-system";
+import { NoDataPlaceholder } from "pages/components";
+import noTask from "assets/illustrations/no-task.svg";
 
 const PageBase = styled.div`
     position: relative;

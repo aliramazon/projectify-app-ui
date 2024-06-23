@@ -1,5 +1,11 @@
 import { produce } from "immer";
 import {
+    AssignedContrubtorsState,
+    NotAssignedContributorsState,
+    ProjectContributor,
+    ProjectContributorBase,
+} from "types";
+import {
     ActionType,
     Actions,
     AddProjectAction,
@@ -9,14 +15,8 @@ import {
     AdminUpdateProjectAction,
     AdminUpdateProjectContributorStatus,
     AdminUpdateProjectContributorsList,
-} from "../actions";
-import { ProjectState } from "../state";
-import {
-    AssignedContrubtorsState,
-    NotAssignedContributorsState,
-    ProjectContributor,
-    ProjectContributorBase,
-} from "../../types";
+} from "store/actions";
+import { ProjectState } from "store/state";
 
 const projectsReducer = produce((draft: ProjectState, action: ActionType) => {
     switch (action.type) {

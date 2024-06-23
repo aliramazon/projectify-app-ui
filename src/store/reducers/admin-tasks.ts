@@ -1,4 +1,5 @@
 import { produce } from "immer";
+import { Task } from "types";
 
 import {
     ActionType,
@@ -8,9 +9,8 @@ import {
     AdminPopulateTasksAction,
     AdminRemoveTaskAction,
     AdminUpdateTaskAction,
-} from "../actions";
-import { TaskState } from "../state";
-import { Task } from "../../types";
+} from "store/actions";
+import { TaskState } from "store/state";
 
 const adminTasksReducer = produce(
     (draft: TaskState, action: ActionType): TaskState => {

@@ -1,13 +1,13 @@
+import { useState } from "react";
 import toast from "react-hot-toast";
 import styled from "styled-components";
-import { ProjectContributorBase } from "../../../types";
-import { Button, Checkbox, Icon, Typography } from "../../../design-system";
-import { Scrollable } from "../../components";
+import { ProjectContributorBase } from "types";
+import { Button, Checkbox, Icon, Typography } from "design-system";
+import { useStore } from "hooks";
+import { projectService } from "api";
+import { Actions, AdminUpdateProjectContributorsList } from "store";
+import { Scrollable } from "pages/components";
 import { ProjectContributor } from "./ProjectContributor";
-import { useState } from "react";
-import { projectService } from "../../../api";
-import { Actions, AdminUpdateProjectContributorsList } from "../../../store";
-import { useStore } from "../../../hooks";
 
 type Props = {
     goBack: () => void;

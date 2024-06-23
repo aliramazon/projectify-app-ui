@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import {
     LinearProgress,
     ProgressColor,
     Toaster,
     Typography,
-} from "../../../design-system";
-import { adminService } from "../../../api";
-import toast from "react-hot-toast";
-import { AuthActionLink } from "../../components";
+} from "design-system";
+import { adminService } from "api";
+import { AuthActionLink } from "pages/components";
 
 const Page = styled.main`
     height: 100vh;

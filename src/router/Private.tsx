@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { useLocalStorage, useStore } from "../hooks";
-import { adminService, teamMemberService } from "../api";
-import { UserRole } from "../types";
-import { Actions, InitUserAction } from "../store";
+import { useLocalStorage, useStore } from "hooks";
+import { adminService, teamMemberService } from "api";
+import { UserRole } from "types";
+import { Actions, InitUserAction } from "store";
 
 type ProtectedRouteProps = {
     component: React.ReactElement;

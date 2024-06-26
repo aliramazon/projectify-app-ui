@@ -28,7 +28,6 @@ const DemoButton = styled(Button)`
 
 const HeroImg = styled.img`
     width: 100%;
-    transform: translateX(-1rem);
 `;
 
 export const Hero = () => {

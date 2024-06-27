@@ -18,5 +18,6 @@ export * from "./Select";
 export * from "./Checkbox";
 export * from "./Progress";
 export * from "./Table";
+export * from "./IconCard";
 
 export * from "./utils";

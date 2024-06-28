@@ -1,0 +1,112 @@
+.card {
+    background-color: var(--white);
+}
+
+/* Border Radius */
+.card-xSmall {
+    border-radius: var(--border-radius-8);
+}
+.card-small {
+    border-radius: var(--border-radius-16);
+}
+.card-medium {
+    border-radius: var(--border-radius-24);
+}
+.card-large {
+    border-radius: var(--border-radius-32);
+}
+.card-xLarge {
+    border-radius: var(--border-radius-40);
+}
+
+/* Background Color */
+.card-primary {
+    background-color: var(--primary-500);
+}
+.card-primaryLight {
+    background-color: var(--primary-25);
+}
+.card-primaryXLight {
+    background-color: var(--primary-12);
+}
+
+.card-greenLight {
+    background-color: var(--green-25);
+}
+.card-sunglowLight {
+    background-color: var(--sunglow-25);
+}
+.card-redOrangeLight {
+    background-color: var(--red-orange-25);
+}
+.card-dodgerBlueLight {
+    background-color: var(--dodger-blue-25);
+}
+.card-purpleLight {
+    background-color: var(--purple-25);
+}
+
+/*  Border Styles */
+.card.card-hasBorder {
+    border: 1px solid var(--jaguar-200);
+}
+
+.card-primaryLight.card-hasBorder {
+    border: 1px solid var(--primary-50);
+}
+
+.card-primaryXLight.card-hasBorder {
+    border: 1px solid var(--primary-24);
+}
+
+.card-greenLight.card-hasBorder {
+    border: 1px solid var(--green-50);
+}
+
+.card-sunglowLight.card-hasBorder {
+    border: 1px solid var(--sunglow-50);
+}
+
+.card-redOrangeLight.card-hasBorder {
+    border: 1px solid var(--red-orange-50);
+}
+
+.card-dodgerBlueLight.card-hasBorder {
+    border: 1px solid var(--dodger-blue-50);
+}
+
+.card-purpleLight.card-hasBorder {
+    border: 1px solid var(--purple-50);
+}
+
+/* Shadow Styles */
+.card.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--jaguar-25);
+}
+.card-primaryLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--primary-25);
+}
+
+.card-primaryXLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--primary-12);
+}
+
+.card-greenLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--green-25);
+}
+
+.card-sunglowLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--sunglow-25);
+}
+
+.card-redOrangeLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--red-orange-25);
+}
+
+.card-dodgerBlueLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--dodger-blue-25);
+}
+
+.card-purpleLight.card-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--purple-25);
+}

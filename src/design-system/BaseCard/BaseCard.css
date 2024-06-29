@@ -1,112 +1,115 @@
-.card {
+.baseCard {
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 /* Border Radius */
-.card-xSmall {
+.baseCard-xSmall {
     border-radius: var(--border-radius-8);
 }
-.card-small {
+.baseCard-small {
     border-radius: var(--border-radius-16);
 }
-.card-medium {
+.baseCard-medium {
     border-radius: var(--border-radius-24);
 }
-.card-large {
+.baseCard-large {
     border-radius: var(--border-radius-32);
 }
-.card-xLarge {
+.baseCard-xLarge {
     border-radius: var(--border-radius-40);
 }
 
 /* Background Color */
-.card-primary {
+.baseCard-primary {
     background-color: var(--primary-500);
 }
-.card-primaryLight {
+.baseCard-primaryLight {
     background-color: var(--primary-25);
 }
-.card-primaryXLight {
+.baseCard-primaryXLight {
     background-color: var(--primary-12);
 }
 
-.card-greenLight {
+.baseCard-greenLight {
     background-color: var(--green-25);
 }
-.card-sunglowLight {
+.baseCard-sunglowLight {
     background-color: var(--sunglow-25);
 }
-.card-redOrangeLight {
+.baseCard-redOrangeLight {
     background-color: var(--red-orange-25);
 }
-.card-dodgerBlueLight {
+.baseCard-dodgerBlueLight {
     background-color: var(--dodger-blue-25);
 }
-.card-purpleLight {
+.baseCard-purpleLight {
     background-color: var(--purple-25);
 }
 
 /*  Border Styles */
-.card.card-hasBorder {
+.baseCard.baseCard-hasBorder {
     border: 1px solid var(--jaguar-50);
 }
 
-.card-primaryLight.card-hasBorder {
+.baseCard-primaryLight.baseCard-hasBorder {
     border: 1px solid var(--primary-50);
 }
 
-.card-primaryXLight.card-hasBorder {
+.baseCard-primaryXLight.baseCard-hasBorder {
     border: 1px solid var(--primary-25);
 }
 
-.card-greenLight.card-hasBorder {
+.baseCard-greenLight.baseCard-hasBorder {
     border: 1px solid var(--green-50);
 }
 
-.card-sunglowLight.card-hasBorder {
+.baseCard-sunglowLight.baseCard-hasBorder {
     border: 1px solid var(--sunglow-50);
 }
 
-.card-redOrangeLight.card-hasBorder {
+.baseCard-redOrangeLight.baseCard-hasBorder {
     border: 1px solid var(--red-orange-50);
 }
 
-.card-dodgerBlueLight.card-hasBorder {
+.baseCard-dodgerBlueLight.baseCard-hasBorder {
     border: 1px solid var(--dodger-blue-50);
 }
 
-.card-purpleLight.card-hasBorder {
+.baseCard-purpleLight.baseCard-hasBorder {
     border: 1px solid var(--purple-50);
 }
 
 /* Shadow Styles */
-.card.card-hasShadow {
+.baseCard.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--jaguar-50);
 }
-.card-primaryLight.card-hasShadow {
+.baseCard-primaryLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--primary-50);
 }
 
-.card-primaryXLight.card-hasShadow {
+.baseCard-primaryXLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--primary-50);
 }
 
-.card-greenLight.card-hasShadow {
+.baseCard-greenLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--green-50);
 }
 
-.card-sunglowLight.card-hasShadow {
+.baseCard-sunglowLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--sunglow-50);
 }
 
-.card-redOrangeLight.card-hasShadow {
+.baseCard-redOrangeLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--red-orange-50);
 }
 
-.card-dodgerBlueLight.card-hasShadow {
+.baseCard-dodgerBlueLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--dodger-blue-50);
 }
 
-.card-purpleLight.card-hasShadow {
+.baseCard-purpleLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--purple-50);
 }

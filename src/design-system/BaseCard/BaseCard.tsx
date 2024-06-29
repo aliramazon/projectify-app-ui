@@ -1,9 +1,9 @@
 import { trimWhiteSpaces } from "design-system/utils";
-import { CardProps } from "./types";
+import { BaseCardProps } from "./types";
 import { colorMap, borderRadiusMap } from "./classnames";
-import "./Card.css";
+import "./BaseCard.css";
 
-const Card: React.FC<CardProps> = ({
+const BaseCard: React.FC<BaseCardProps> = ({
     color,
     borderRadius,
     hasBorder,
@@ -15,10 +15,10 @@ const Card: React.FC<CardProps> = ({
     const borderRadiusClassName = borderRadius
         ? borderRadiusMap[borderRadius]
         : "";
-    const borderClassName = hasBorder ? "card-hasBorder" : "";
-    const shadowClassName = hasShadow ? "card-hasShadow" : "";
+    const borderClassName = hasBorder ? "baseCard-hasBorder" : "";
+    const shadowClassName = hasShadow ? "baseCard-hasShadow" : "";
     const classNames = trimWhiteSpaces(
-        `card ${colorClassName} ${borderRadiusClassName} ${borderClassName} ${shadowClassName} ${
+        `baseCard ${colorClassName} ${borderRadiusClassName} ${borderClassName} ${shadowClassName} ${
             className ? className : ""
         }`
     );
@@ -26,4 +26,4 @@ const Card: React.FC<CardProps> = ({
     return <div className={classNames}>{children}</div>;
 };
 
-export { Card };
+export { BaseCard };

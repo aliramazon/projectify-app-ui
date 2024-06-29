@@ -1,4 +1,4 @@
-export type CardColor =
+export type BaseCardColor =
     | "primary"
     | "primary-x-light"
     | "primary-light"
@@ -8,18 +8,18 @@ export type CardColor =
     | "dodger-blue-light"
     | "purple-light";
 
-export type CardBorderRadius =
+export type BaseCardBorderRadius =
     | "x-small"
     | "small"
     | "medium"
     | "large"
     | "x-large";
 
-export interface CardProps {
+export interface BaseCardProps {
     children: React.ReactNode;
     className?: string;
-    color?: CardColor;
-    borderRadius?: CardBorderRadius;
+    color?: BaseCardColor;
+    borderRadius?: BaseCardBorderRadius;
     hasBorder?: boolean;
     hasShadow?: boolean;
 }

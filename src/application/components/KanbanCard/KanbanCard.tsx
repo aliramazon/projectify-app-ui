@@ -23,7 +23,7 @@ export const KanbanCardBase = styled.div<{ $isDragging: boolean }>`
         `}
 
     &:not(:last-of-type) {
-        margin-bottom: var(--space-10);
+        margin-bottom: var(--space-12);
     }
 `;
 

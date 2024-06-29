@@ -8,7 +8,7 @@ const AppPage = styled.section`
     height: 100vh;
     width: 100%;
     background-color: var(--jaguar-12);
-    padding: var(--space-30);
+    padding: var(--space-32);
 `;
 
 export const Scrollable = styled.div`

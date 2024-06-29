@@ -4,7 +4,7 @@ import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`
     background-color: var(--primary-12);
-    padding: 0 var(--space-30);
+    padding: 0 var(--space-32);
 `;
 const NavigationLayout = styled.div`
     height: 7.2rem;
@@ -15,7 +15,7 @@ const NavigationLayout = styled.div`
 
 const AuthLinks = styled.div`
     display: flex;
-    column-gap: var(--space-10);
+    column-gap: var(--space-12);
 `;
 
 const NavLinks = styled.div`

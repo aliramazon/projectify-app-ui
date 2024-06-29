@@ -35,7 +35,7 @@ export const TableBody = styled.tbody`
         box-shadow: var(--shadow-xs);
     }
     ${TableRowBase}:not(:last-child) {
-        margin-bottom: var(--space-10);
+        margin-bottom: var(--space-8);
     }
 `;
 

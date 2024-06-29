@@ -5,7 +5,7 @@ import heroImg from "assets/images/hero.png";
 
 const HeroBase = styled.header`
     background-color: var(--primary-12);
-    padding: 0 var(--space-30);
+    padding: 0 var(--space-32);
 `;
 
 const HeroContent = styled.div`
@@ -19,11 +19,11 @@ const HeroSubtext = styled(Typography)`
     color: var(--jaguar-500);
     max-width: 65rem;
     margin-top: var(--space-20);
-    margin-bottom: var(--space-30);
+    margin-bottom: var(--space-32);
 `;
 
 const DemoButton = styled(Button)`
-    margin-bottom: var(--space-50);
+    margin-bottom: var(--space-48);
 `;
 
 const HeroImg = styled.img`

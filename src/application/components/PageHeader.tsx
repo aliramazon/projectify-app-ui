@@ -10,7 +10,7 @@ const PageHeaderBase = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--space-30);
+    margin-bottom: var(--space-32);
 `;
 
 const PageHeader: React.FC<PageHeaderProps> = ({

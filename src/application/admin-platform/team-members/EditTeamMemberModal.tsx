@@ -27,7 +27,7 @@ const Inputs = styled.div`
 
 const Buttons = styled.div`
     display: flex;
-    gap: var(--space-10);
+    gap: var(--space-12);
 `;
 
 const EditTeamMemberModal: React.FC<ModalProps> = ({

@@ -13,8 +13,8 @@ const ClientsLayout = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: var(--space-50);
-    padding: var(--space-30) 0;
+    column-gap: var(--space-48);
+    padding: var(--space-32) 0;
 `;
 
 export const Clients = () => {

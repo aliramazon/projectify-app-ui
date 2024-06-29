@@ -30,13 +30,13 @@ enum StatusToColumnTitleColor {
 const TasksColumns = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-30);
+    gap: var(--space-32);
     height: calc(100% - 7rem);
 `;
 
 const TasksColumn = styled.div`
     height: 100%;
-    padding: var(--space-24) 0 var(--space-10) var(--space-10);
+    padding: var(--space-24) var(--space-12) var(--space-12) var(--space-12);
     border-radius: var(--border-radius-16);
     border: 0.15rem solid var(--jaguar-100);
     overflow: auto;
@@ -54,7 +54,7 @@ const KanbanCards = styled(Scrollable)`
     ); // Excluding Column Title Line-height + margin bottom of it
 
     ${KanbanCardBase} {
-        width: calc(100% - var(--space-10));
+        width: calc(100% - var(--space-12));
     }
 `;
 

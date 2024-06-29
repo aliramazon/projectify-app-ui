@@ -21,7 +21,7 @@ const Illustration = styled.img.attrs({ alt: "There is no data" })`
     margin: 0 auto var(--space-24) auto;
 `;
 const Text = styled(Typography)`
-    margin-bottom: var(--space-50);
+    margin-bottom: var(--space-48);
     text-align: center;
 `;
 

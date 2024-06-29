@@ -19,7 +19,7 @@ const AuthForm = styled.section<{ $switchLayout?: boolean }>`
     grid-row: 1 / 2;
     grid-column: ${(props) => (props.$switchLayout ? "2 / 3" : "1 / 2")};
 
-    padding: var(--space-50);
+    padding: var(--space-48);
 
     display: flex;
     align-items: center;
@@ -30,14 +30,14 @@ const AuthContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-50);
+    gap: var(--space-48);
     flex-basis: 47rem;
 `;
 
 const AuthImageWrapper = styled.section<{ $switchLayout?: boolean }>`
     grid-row: 1 / 2;
     grid-column: ${(props) => (props.$switchLayout ? "1 / 2 " : "2 / 3")};
-    padding: var(--space-50);
+    padding: var(--space-48);
 `;
 
 const AuthImage = styled.img.attrs({
@@ -45,7 +45,7 @@ const AuthImage = styled.img.attrs({
 })`
     height: 100%;
     width: 100%;
-    border-radius: var(--space-50);
+    border-radius: var(--space-48);
     object-fit: cover;
     transition: all 1s;
 

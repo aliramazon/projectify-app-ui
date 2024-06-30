@@ -17,7 +17,7 @@
 }
 
 .btn-secondary.select__header.select__header--has-selection {
-    color: var(--jaguar-900);
+    color: var(--jaguar-700);
 }
 
 .btn-secondary.select__header:focus {
@@ -76,7 +76,7 @@
 /* Select Item */
 .select__item {
     height: 3.2rem;
-    color: var(--jaguar-900);
+    color: var(--jaguar-700);
     font-size: var(--font-size-16);
     display: grid;
     grid-template-columns: 1fr 2rem;

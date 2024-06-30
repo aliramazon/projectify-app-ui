@@ -44,7 +44,7 @@
 .heading-4,
 .heading-5,
 .heading-6 {
-    color: var(--jaguar-900);
+    color: var(--jaguar-700);
 }
 
 .display-lg {
@@ -96,7 +96,7 @@
 .button-lowercase,
 .button-uppercase,
 .overline {
-    color: var(--jaguar-900); /* Replace 'blue' with your desired color */
+    color: var(--jaguar-700); /* Replace 'blue' with your desired color */
 }
 
 .paragraph-lg {

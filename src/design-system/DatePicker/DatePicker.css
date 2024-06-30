@@ -25,7 +25,7 @@
 .react-datepicker__day.v1-date-picker__day-wrapper {
     height: 3.6rem;
     width: 3.6rem;
-    color: var(--jaguar-900);
+    color: var(--jaguar-700);
     border-radius: 0;
     user-select: none;
 }
@@ -101,7 +101,7 @@
 }
 
 .v1-date-picker .react-datepicker__current-month {
-    color: var(--jaguar-900);
+    color: var(--jaguar-700);
     font-size: var(--font-size-20);
     font-weight: var(--font-weight-400);
 

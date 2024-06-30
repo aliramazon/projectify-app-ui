@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Container } from "marketing/components";
+import { Container, SectionRightAndLeftPadding } from "marketing/components";
 import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`
     background-color: var(--primary-12);
-    padding: 0 var(--space-32);
+    ${SectionRightAndLeftPadding}
 `;
 const NavigationLayout = styled.div`
     height: 7.2rem;

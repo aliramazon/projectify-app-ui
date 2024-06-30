@@ -1,15 +1,18 @@
 import styled from "styled-components";
-import { Typography } from "design-system";
 
-import { Container, Card } from "marketing/components";
+import {
+    Container,
+    Card,
+    SectionBase,
+    SectionHeading,
+    SectionSubHeading,
+} from "marketing/components";
 import { data } from "./data";
 
-const FeaturesBase = styled.section`
+const FeaturesBase = styled(SectionBase)`
     background-color: var(--white);
-    padding: var(--space-96) var(--space-32);
 
-    .sectionSubText {
-        color: var(--jaguar-500);
+    .sectionHeadings {
         margin-bottom: var(--space-48);
     }
 `;
@@ -20,8 +23,6 @@ const FeatureCards = styled.div`
     flex-wrap: wrap;
 
     .featureCard {
-        flex-grow: 0;
-        flex-shrink: 0;
         flex-basis: calc((100% - var(--space-64)) / 3);
     }
 `;
@@ -30,18 +31,14 @@ export const Features = () => {
     return (
         <FeaturesBase>
             <Container>
-                <Typography variant="h5" weight="bold" align="center">
-                    Get the best for your team
-                </Typography>
-                <Typography
-                    variant="paragraphSM"
-                    weight="medium"
-                    align="center"
-                    className="sectionSubText"
-                >
-                    Our solution provides simple yet effective project
-                    management.
-                </Typography>
+                <div className="sectionHeadings">
+                    <SectionHeading>Get the best for your team</SectionHeading>
+                    <SectionSubHeading>
+                        Our solution provides simple yet effective project
+                        management.
+                    </SectionSubHeading>
+                </div>
+
                 <FeatureCards>
                     {data.map((item) => {
                         return (

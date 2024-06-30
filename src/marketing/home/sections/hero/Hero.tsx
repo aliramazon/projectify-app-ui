@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { Button, Typography } from "design-system";
-import { Container } from "marketing/components";
+import {
+    Container,
+    SectionRightAndLeftPadding,
+    SectionSubHeading,
+} from "marketing/components";
 import heroImg from "assets/images/hero.png";
 
 const HeroBase = styled.header`
     background-color: var(--primary-12);
-    padding: 0 var(--space-32);
+    ${SectionRightAndLeftPadding}
 `;
 
 const HeroContent = styled.div`
@@ -13,13 +17,11 @@ const HeroContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
 
-const HeroSubtext = styled(Typography)`
-    color: var(--jaguar-500);
-    max-width: 65rem;
-    margin-top: var(--space-20);
-    margin-bottom: var(--space-32);
+    .sectionSubHeading {
+        margin-bottom: var(--space-32);
+        max-width: 65rem;
+    }
 `;
 
 const DemoButton = styled(Button)`
@@ -38,11 +40,11 @@ export const Hero = () => {
                     <Typography variant="h1" align="center">
                         Unleash the Power of Projectify
                     </Typography>
-                    <HeroSubtext variant="paragraphSM" align="center">
+                    <SectionSubHeading>
                         Projectify is your all-in-one solution, crafted to
                         simplify your project management journey and supercharge
                         your success
-                    </HeroSubtext>
+                    </SectionSubHeading>
                     <DemoButton
                         color="primary"
                         variant="contained"

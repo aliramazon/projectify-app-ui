@@ -4,8 +4,8 @@ export const colorMap = {
     "primary-light": "baseCard-primaryLight",
     "green-light": "baseCard-greenLight",
     "sunglow-light": "baseCard-sunglowLight",
-    "red-orange-light": "baseCard-redOrangeLight",
-    "dodger-blue-light": "baseCard-dodgerBlueLight",
+    "red-light": "baseCard-redLight",
+    "blue-light": "baseCard-blueLight",
     "purple-light": "baseCard-purpleLight",
 };
 

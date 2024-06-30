@@ -35,7 +35,7 @@ export const data: CardData[] = [
         },
     },
     {
-        color: "red-orange-light",
+        color: "red-light",
         iconName: "clock-heart",
         data: {
             title: "Flexible Workflows",
@@ -43,7 +43,7 @@ export const data: CardData[] = [
         },
     },
     {
-        color: "dodger-blue-light",
+        color: "blue-light",
         iconName: "document-chart",
         data: {
             title: "Insightful Analytics",

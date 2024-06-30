@@ -19,7 +19,7 @@ const HintTextTypography = styled(Typography)`
 `;
 
 const StyledLink = styled(Link)`
-    color: var(--primary-500);
+    color: var(--violet-500);
     font-weight: var(--font-weight-600);
 `;
 

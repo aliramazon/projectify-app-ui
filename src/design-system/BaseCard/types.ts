@@ -4,8 +4,8 @@ export type BaseCardColor =
     | "primary-light"
     | "green-light"
     | "sunglow-light"
-    | "red-orange-light"
-    | "dodger-blue-light"
+    | "red-light"
+    | "blue-light"
     | "purple-light";
 
 export type BaseCardBorderRadius =

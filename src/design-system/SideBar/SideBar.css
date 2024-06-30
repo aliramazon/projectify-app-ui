@@ -36,8 +36,8 @@
 
 .side-bar__link.active,
 .side-bar__link:hover {
-    color: var(--primary-500);
-    background-color: var(--primary-12);
+    color: var(--violet-500);
+    background-color: var(--violet-12);
 }
 
 .side-bar__link-icon {
@@ -47,7 +47,7 @@
 
 .side-bar__link.active .side-bar__link-icon,
 .side-bar__link:hover .side-bar__link-icon {
-    fill: var(--primary-500);
+    fill: var(--violet-500);
 }
 
 .side-bar__link-item .side-bar__link::before {
@@ -61,7 +61,7 @@
 }
 
 .side-bar__link.active::before {
-    background-color: var(--primary-500);
+    background-color: var(--violet-500);
 }
 
 .side-bar__log-out {

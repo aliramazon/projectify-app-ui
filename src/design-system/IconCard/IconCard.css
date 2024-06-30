@@ -72,12 +72,12 @@
 }
 
 .iconCard-primary {
-    background-color: var(--primary-500);
+    background-color: var(--violet-500);
 }
 
 .iconCard-primaryLight {
-    background-color: var(--primary-50);
-    border: 1px solid var(--primary-100);
+    background-color: var(--violet-50);
+    border: 1px solid var(--violet-100);
 }
 
 .iconCard-purple {
@@ -89,20 +89,20 @@
     border: 1px solid var(--purple-100);
 }
 
-.iconCard-redOrange {
+.iconCard-red {
     background-color: var(--red-orange-500);
 }
 
-.iconCard-redOrangeLight {
+.iconCard-redLight {
     background-color: var(--red-orange-50);
     border: 1px solid var(--red-orange-100);
 }
 
-.iconCard-dodgerBlue {
+.iconCard-blue {
     background-color: var(--dodger-blue-500);
 }
 
-.iconCard-dodgerBlueLight {
+.iconCard-blueLight {
     background-color: var(--dodger-blue-50);
     border: 1px solid var(--dodger-blue-100);
 }
@@ -129,7 +129,7 @@
 }
 
 .iconCard-primaryLight .iconCard-icon {
-    fill: var(--primary-500);
+    fill: var(--violet-500);
 }
 
 .iconCard-purple .iconCard-icon {
@@ -140,18 +140,18 @@
     fill: var(--purple-500);
 }
 
-.iconCard-redOrange .iconCard-icon {
+.iconCard-red .iconCard-icon {
     fill: var(--white);
 }
 
-.iconCard-redOrangeLight .iconCard-icon {
+.iconCard-redLight .iconCard-icon {
     fill: var(--red-orange-500);
 }
 
-.iconCard-dodgerBlue .iconCard-icon {
+.iconCard-blue .iconCard-icon {
     fill: var(--white);
 }
 
-.iconCard-dodgerBlueLight .iconCard-icon {
+.iconCard-blueLight .iconCard-icon {
     fill: var(--dodger-blue-500);
 }

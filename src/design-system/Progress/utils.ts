@@ -13,7 +13,7 @@ export const getFinalClassName = (
 ) => {
     const colorClassNames = {
         orange: "linear-progress--orange",
-        primary: "linear-progress--primary",
+        primary: "linear-progress--violet",
         green: "linear-progress--green",
         red: "linear-progress--red",
     };

@@ -24,13 +24,13 @@
 
 /* Background Color */
 .baseCard-primary {
-    background-color: var(--primary-500);
+    background-color: var(--violet-500);
 }
 .baseCard-primaryLight {
-    background-color: var(--primary-25);
+    background-color: var(--violet-25);
 }
 .baseCard-primaryXLight {
-    background-color: var(--primary-12);
+    background-color: var(--violet-12);
 }
 
 .baseCard-greenLight {
@@ -39,10 +39,10 @@
 .baseCard-sunglowLight {
     background-color: var(--sunglow-25);
 }
-.baseCard-redOrangeLight {
+.baseCard-redLight {
     background-color: var(--red-orange-25);
 }
-.baseCard-dodgerBlueLight {
+.baseCard-blueLight {
     background-color: var(--dodger-blue-25);
 }
 .baseCard-purpleLight {
@@ -55,11 +55,11 @@
 }
 
 .baseCard-primaryLight.baseCard-hasBorder {
-    border: 1px solid var(--primary-50);
+    border: 1px solid var(--violet-50);
 }
 
 .baseCard-primaryXLight.baseCard-hasBorder {
-    border: 1px solid var(--primary-25);
+    border: 1px solid var(--violet-25);
 }
 
 .baseCard-greenLight.baseCard-hasBorder {
@@ -70,11 +70,11 @@
     border: 1px solid var(--sunglow-50);
 }
 
-.baseCard-redOrangeLight.baseCard-hasBorder {
+.baseCard-redLight.baseCard-hasBorder {
     border: 1px solid var(--red-orange-50);
 }
 
-.baseCard-dodgerBlueLight.baseCard-hasBorder {
+.baseCard-blueLight.baseCard-hasBorder {
     border: 1px solid var(--dodger-blue-50);
 }
 
@@ -87,11 +87,11 @@
     box-shadow: 0px 3px 6px 0px var(--jaguar-50);
 }
 .baseCard-primaryLight.baseCard-hasShadow {
-    box-shadow: 0px 3px 6px 0px var(--primary-50);
+    box-shadow: 0px 3px 6px 0px var(--violet-50);
 }
 
 .baseCard-primaryXLight.baseCard-hasShadow {
-    box-shadow: 0px 3px 6px 0px var(--primary-50);
+    box-shadow: 0px 3px 6px 0px var(--violet-50);
 }
 
 .baseCard-greenLight.baseCard-hasShadow {
@@ -102,11 +102,11 @@
     box-shadow: 0px 3px 6px 0px var(--sunglow-50);
 }
 
-.baseCard-redOrangeLight.baseCard-hasShadow {
+.baseCard-redLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--red-orange-50);
 }
 
-.baseCard-dodgerBlueLight.baseCard-hasShadow {
+.baseCard-blueLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--dodger-blue-50);
 }
 

@@ -4,14 +4,14 @@ export type IconCardColor =
     | "green"
     | "sunglow"
     | "primary"
-    | "red-orange"
-    | "dodger-blue"
+    | "red"
+    | "blue"
     | "purple"
     | "green-light"
     | "sunglow-light"
     | "primary-light"
-    | "red-orange-light"
-    | "dodger-blue-light"
+    | "red-light"
+    | "blue-light"
     | "purple-light";
 
 export type IconCardSize = "sm" | "md" | "lg";

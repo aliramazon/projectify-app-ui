@@ -6,34 +6,7 @@ import {
     alignClassNames,
 } from "./classnames";
 import { trimWhiteSpaces } from "../utils";
-
-type TypographyVariant =
-    | "displayLG"
-    | "displaySM"
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "paragraphLG"
-    | "paragraphMD"
-    | "paragraphSM"
-    | "subtitleLG"
-    | "subtitleMD"
-    | "subtitleSM";
-
-type TypographyWeight = "normal" | "medium" | "semibold" | "bold";
-
-type TypographyAlign = "center" | "left" | "right" | "justify" | "inherit";
-
-type TypographyProps = {
-    variant: TypographyVariant;
-    weight?: TypographyWeight;
-    align?: TypographyAlign;
-    className?: string;
-    children: React.ReactNode;
-};
+import { TypographyProps } from "./types";
 
 export const Typography: React.FC<TypographyProps> = ({
     variant,

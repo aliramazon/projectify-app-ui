@@ -9,14 +9,14 @@ export const colorClassNames = {
     sunglow: "iconCard-sunglow",
     primary: "iconCard-primary",
     purple: "iconCard-purple",
-    "dodger-blue": "iconCard-dodgerBlue",
-    "red-orange": "iconCard-redOrange",
+    blue: "iconCard-blue",
+    red: "iconCard-red",
     "green-light": "iconCard-greenLight",
     "sunglow-light": "iconCard-sunglowLight",
     "primary-light": "iconCard-primaryLight",
     "purple-light": "iconCard-purpleLight",
-    "red-orange-light": "iconCard-redOrangeLight",
-    "dodger-blue-light": "iconCard-dodgerBlueLight",
+    "red-light": "iconCard-redLight",
+    "blue-light": "iconCard-blueLight",
 };
 
 export const shapeClassNames = {

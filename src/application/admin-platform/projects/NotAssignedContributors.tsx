@@ -24,7 +24,7 @@ const Header = styled.div`
     border-bottom: 1px solid var(--jaguar-100);
 
     svg {
-        fill: var(--primary-500);
+        fill: var(--violet-500);
         cursor: pointer;
     }
 `;

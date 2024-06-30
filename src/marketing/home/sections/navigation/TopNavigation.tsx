@@ -3,7 +3,7 @@ import { Container, SectionRightAndLeftPadding } from "marketing/components";
 import { Button, Logo } from "design-system";
 
 const TopNavigationBase = styled.nav`
-    background-color: var(--primary-12);
+    background-color: var(--violet-12);
     ${SectionRightAndLeftPadding}
 `;
 const NavigationLayout = styled.div`

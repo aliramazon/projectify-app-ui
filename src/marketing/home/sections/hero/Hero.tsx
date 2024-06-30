@@ -8,7 +8,7 @@ import {
 import heroImg from "assets/images/hero.png";
 
 const HeroBase = styled.header`
-    background-color: var(--primary-12);
+    background-color: var(--violet-12);
     ${SectionRightAndLeftPadding}
 `;
 

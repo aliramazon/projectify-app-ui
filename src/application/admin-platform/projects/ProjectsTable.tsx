@@ -86,7 +86,7 @@ const allowedActions = {
 
 const columns = ["20%", "10%", "20%", "15%", "15%", "10%", "10%"];
 enum StatusToBadgeColors {
-    ACTIVE = "violet",
+    ACTIVE = "primary",
     ARCHIVED = "gray",
     COMPLETED = "green",
     ONHOLD = "red",
@@ -196,7 +196,7 @@ const ProjectsTable: React.FC<ProjectsTableProps> = ({ data }) => {
                                         <ProgressWrapper>
                                             <LinearProgress
                                                 value={project.progress}
-                                                color="blue"
+                                                color="primary"
                                                 shape="rounded"
                                             />
                                         </ProgressWrapper>

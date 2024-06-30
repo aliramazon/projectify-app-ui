@@ -38,8 +38,8 @@
     background-color: var(--sunglow-50);
 }
 
-.linear-progress--blue .linear-progress__max {
-    background-color: var(--blue-ribbon-50);
+.linear-progress--primary .linear-progress__max {
+    background-color: var(--primary-50);
 }
 
 .linear-progress--red .linear-progress__max {
@@ -50,16 +50,12 @@
     background-color: var(--green-50);
 }
 
-.linear-progress--green .linear-progress__progress {
-    background-color: var(--green-50);
-}
-
 .linear-progress--orange .linear-progress__progress {
     background-color: var(--sunglow-700);
 }
 
-.linear-progress--blue .linear-progress__progress {
-    background-color: var(--blue-ribbon-500);
+.linear-progress--primary .linear-progress__progress {
+    background-color: var(--primary-500);
 }
 
 .linear-progress--red .linear-progress__progress {
@@ -76,8 +72,8 @@
     fill: var(--sunglow-700);
 }
 
-.linear-progress--blue .linear-progress__indicator-icon {
-    fill: var(--blue-ribbon-500);
+.linear-progress--primary .linear-progress__indicator-icon {
+    fill: var(--primary-500);
 }
 
 .linear-progress--red .linear-progress__indicator-icon {
@@ -94,8 +90,8 @@
     color: var(--sunglow-700);
 }
 
-.linear-progress--blue .linear-progress__indicator-text {
-    color: var(--blue-ribbon-500);
+.linear-progress--primary .linear-progress__indicator-text {
+    color: var(--primary-500);
 }
 
 .linear-progress--red .linear-progress__indicator-text {

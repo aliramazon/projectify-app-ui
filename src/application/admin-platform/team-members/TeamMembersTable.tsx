@@ -33,7 +33,7 @@ const TableContainer = styled(Scrollable)`
 `;
 
 const JoinedDate = styled(Typography)`
-    color: var(--blue-ribbon-600);
+    color: var(--dodger-blue-600);
 `;
 
 const options: MenuOption[] = [
@@ -61,7 +61,7 @@ const allowedActions = {
 
 const columns = ["12.5%", "12.5%", "20%", "20%", "15%", "15%", "5%"];
 const mapsStatusToBadgeColors = {
-    ACTIVE: "violet",
+    ACTIVE: "primary",
     INACTIVE: "gray",
     DEACTIVATED: "red",
 };

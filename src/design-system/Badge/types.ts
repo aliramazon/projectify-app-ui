@@ -1,13 +1,6 @@
 import { IconName } from "../Icon";
 
-export type BadgeColors =
-    | "violet"
-    | "orange"
-    | "green"
-    | "blue"
-    | "red"
-    | "purple"
-    | "gray";
+export type BadgeColors = "primary" | "orange" | "green" | "red" | "gray";
 
 type BadgeShape = "rounded" | "circle";
 

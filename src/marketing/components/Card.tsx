@@ -29,6 +29,7 @@ const CardBase = styled(BaseCard)`
 
     .cardTitle {
         margin-bottom: var(--space-8);
+        color: var(--jaguar-700);
     }
 
     .cardText {

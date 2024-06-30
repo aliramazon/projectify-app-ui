@@ -15,12 +15,10 @@ const variantClassNames = {
 };
 
 const colorClassNames = {
-    violet: "badge-violet",
+    primary: "badge-primary",
     orange: "badge-orange",
     green: "badge-green",
-    blue: "badge-blue",
     red: "badge-red",
-    purple: "badge-purple",
     gray: "badge-gray",
 };
 

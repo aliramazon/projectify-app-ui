@@ -75,7 +75,7 @@
     gap: var(--space-16);
     color: var(--jaguar-700);
     cursor: pointer;
-    height: 4rem;
+
     width: max-content;
 }
 

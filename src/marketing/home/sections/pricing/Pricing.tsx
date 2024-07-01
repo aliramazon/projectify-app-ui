@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Switch } from "design-system";
+import { Switch, Typography } from "design-system";
 import {
     Container,
     SectionBase,
@@ -8,34 +8,47 @@ import {
 } from "marketing/components";
 import { useState } from "react";
 
+type BillingTermType = "monthly" | "yearly";
+
 const PricingBase = styled(SectionBase)`
     background-color: var(--jaguar-25);
 
     .sectionHeading span {
         color: var(--violet-500);
     }
-
-    .sectionSubHeading {
-        margin-bottom: var(--space-28);
-    }
 `;
 
-const subscriptionPlans = {
+const BillingTermSwitcher = styled.div`
+    display: flex;
+    column-gap: var(--space-24);
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    margin-top: var(--space-16);
+`;
+
+const BillingTerm = styled.div`
+    cursor: pointer;
+`;
+
+const billingTerms = {
     monthly: false,
     yearly: true,
 };
 
 export const Pricing = () => {
-    const [subscription, setSubscription] = useState<"monthly" | "yearly">(
-        "monthly"
-    );
+    const [billingTerm, setBillingTerm] = useState<BillingTermType>("monthly");
 
     const handlePlanChange = (value: boolean) => {
         if (value) {
-            setSubscription("yearly");
-            return;
+            setBillingTerm("yearly");
+        } else {
+            setBillingTerm("monthly");
         }
-        setSubscription("monthly");
+    };
+
+    const selectBillingTerm = (term: BillingTermType) => {
+        setBillingTerm(term);
     };
 
     return (
@@ -48,12 +61,47 @@ export const Pricing = () => {
                 <SectionSubHeading>
                     Flexible pricing options for startups and big teams
                 </SectionSubHeading>
-                <Switch
-                    checked={subscriptionPlans[subscription]}
-                    id="subscription"
-                    onSwitch={handlePlanChange}
-                    shape="circle"
-                />
+                <BillingTermSwitcher>
+                    <BillingTerm
+                        className="billingTerm"
+                        onClick={() => selectBillingTerm("monthly")}
+                    >
+                        <Typography
+                            color={
+                                billingTerm === "monthly"
+                                    ? "neutral-strong"
+                                    : "neutral"
+                            }
+                            variant="paragraph-sm"
+                            weight="medium"
+                        >
+                            Billed monthly
+                        </Typography>
+                    </BillingTerm>
+
+                    <Switch
+                        checked={billingTerms[billingTerm]}
+                        id="billingterm"
+                        onSwitch={handlePlanChange}
+                        shape="circle"
+                    />
+                    <BillingTerm
+                        className="billingTerm"
+                        onClick={() => selectBillingTerm("yearly")}
+                    >
+                        <Typography
+                            color={
+                                billingTerm === "yearly"
+                                    ? "neutral-strong"
+                                    : "neutral"
+                            }
+                            variant="paragraph-sm"
+                            weight="medium"
+                        >
+                            Billed yearly
+                        </Typography>
+                    </BillingTerm>
+                </BillingTermSwitcher>
             </Container>
         </PricingBase>
     );

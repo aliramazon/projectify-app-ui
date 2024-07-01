@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Projectify App UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Projectify is a comprehensive project management system designed to facilitate project tracking, task management, team collaboration, and more. The frontend UI for this application was developed to be user-friendly, responsive, and highly functional. A live demo is available at [projectify.dev](https://projectify.dev).
 
-In the project directory, you can run:
+## Course Highlights
 
-### `npm start`
+I taught frontend development to 6 students selected from 50 applicants. The focus was on creating a robust and scalable UI for the Projectify app using modern frontend technologies and best practices. Below are the major areas covered in the course:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Design System
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Students learned how to create a complete design system from scratch, which included:
 
-### `npm test`
+-   **Button**: Customizable buttons for various use cases.
+-   **Modals**: Reusable modal components for dialogs and forms.
+-   **Selects**: Custom select dropdowns.
+-   **Badges**: Status indicators and labels.
+-   **Typography**: Consistent and scalable typographic system.
+-   **Switch**: Toggle switches for settings.
+-   **Tables**: Dynamic and responsive tables for data display.
+-   **Checkboxes**: Custom checkbox components.
+-   **Inputs**: Styled input fields with validation.
+-   **DatePickers**: Date selection components.
+-   **Progress Bars**: Visual indicators for progress tracking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### API Abstraction
 
-### `npm run build`
+-   **Services Layer**: Abstracted API calls into a separate layer called services to manage all HTTP requests, ensuring a clean and maintainable codebase.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### State Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   **Context API**: Implemented a Redux-like state management system using Context API, useReducer, and useContext.
+-   **Reducer Management**: Explained how to split reducers for modularity and combine them later for state management.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Routing
 
-### `npm run eject`
+-   **Authenticated Routes**: Protected routes to ensure only authenticated users can access certain pages.
+-   **Authorized Routes**: Managed access based on user roles and permissions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Componentization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   **Atomic Design Approach**: Taught students how to build components using the atomic design methodology for better reusability and maintainability.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Styling
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   **Styled Components**: Utilized styled-components for writing CSS-in-JS for components.
+-   **TypeScript**: Used TypeScript to ensure type safety and enhance code quality.
+-   **Flexbox and CSS Grid**: Taught layout techniques using Flexbox and CSS Grid for responsive design.
 
-## Learn More
+### Additional Topics
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   **Authentication and Authorization**: Implemented user authentication and role-based authorization.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Conclusion
 
-### Code Splitting
+The Projectify App UI project provided students with hands-on experience in building a modern, scalable, and maintainable frontend for a project management system. By the end of the course, students had developed a solid understanding of frontend development best practices, advanced state management, and the creation of a robust design system.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The biggest UI project we built is available at [Projectify App UI](https://github.com/aliramazon/projectify-app-ui), and the backend is available at [Projectify App API](https://github.com/aliramazon/projectify-app-api). The live demo of the project can be seen at [projectify.dev](https://projectify.dev).

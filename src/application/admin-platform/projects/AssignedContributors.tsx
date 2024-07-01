@@ -61,10 +61,6 @@ const ContributorControl = styled.div`
     align-items: end;
 `;
 
-const JoinedAt = styled(Typography)`
-    color: var(--jaguar-500);
-`;
-
 const AddButtonWrapper = styled.div`
     padding: 0 var(--space-16);
     height: 7.2rem;
@@ -129,7 +125,7 @@ const AssignedContributors: React.FC<Props> = ({
     return (
         <>
             <Header>
-                <Typography variant="paragraphLG" weight="medium">
+                <Typography variant="paragraph-lg" weight="medium">
                     Contributors
                 </Typography>
                 <Icon iconName="x" onClick={closeModal} />
@@ -171,15 +167,16 @@ const AssignedContributors: React.FC<Props> = ({
                                             ] as BadgeColors
                                         }
                                     />
-                                    <JoinedAt
-                                        variant="subtitleSM"
+                                    <Typography
+                                        variant="subtitle-sm"
                                         weight="medium"
+                                        color="neutral"
                                     >
                                         Joined at{" "}
                                         {formatAsMMMddYYYY(
                                             contributor.joinedAt!
                                         )}
-                                    </JoinedAt>
+                                    </Typography>
                                 </ContributorControl>
                             </ContributorBase>
                         );

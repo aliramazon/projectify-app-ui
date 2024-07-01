@@ -37,10 +37,6 @@ const TaskTitle = styled(Typography)`
     margin-bottom: var(--space-4);
 `;
 
-const TaskDescription = styled(Typography)`
-    color: var(--jaguar-500);
-`;
-
 const TaskDue = styled(Badge)`
     align-self: flex-end;
 `;
@@ -88,12 +84,16 @@ const KanbanCard: React.FC<KanbanCardProps> = ({
                 <Menu options={menuActions} onSelect={handleOnSelectMenuItem} />
             </KanbanCardHeader>
             <div>
-                <TaskTitle variant="paragraphLG" weight="semibold">
+                <TaskTitle variant="paragraph-lg" weight="semibold">
                     {task?.title}
                 </TaskTitle>
-                <TaskDescription variant="subtitleLG" weight="medium">
+                <Typography
+                    variant="subtitle-lg"
+                    weight="medium"
+                    color="neutral"
+                >
                     {task?.description}
-                </TaskDescription>
+                </Typography>
             </div>
             <TaskDue
                 label={formatAsMMMMd(task.due)}

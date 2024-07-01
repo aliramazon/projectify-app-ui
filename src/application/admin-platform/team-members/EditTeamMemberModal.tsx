@@ -93,7 +93,7 @@ const EditTeamMemberModal: React.FC<ModalProps> = ({
 
     return (
         <Modal show={show} position="center">
-            <ModalTitle variant="paragraphLG" weight="medium">
+            <ModalTitle variant="paragraph-lg" weight="medium">
                 Update Member
             </ModalTitle>
             <Inputs>

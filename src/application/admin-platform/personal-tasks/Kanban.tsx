@@ -22,9 +22,9 @@ enum StatusToTitle {
 }
 
 enum StatusToColumnTitleColor {
-    TODO = "var(--jaguar-500)",
-    INPROGRESS = "var(--sunglow-700)",
-    DONE = "var(--green-500)",
+    TODO = "neutral",
+    INPROGRESS = "warning-strong",
+    DONE = "success",
 }
 
 const TasksColumns = styled.div`
@@ -43,9 +43,8 @@ const TasksColumn = styled.div`
     background-color: var(--jaguar-25);
 `;
 
-const TasksColumnTitle = styled(Typography)<{ color: string }>`
+const TasksColumnTitle = styled(Typography)`
     margin-bottom: var(--space-16);
-    color: ${(props) => props.color};
 `;
 
 const KanbanCards = styled(Scrollable)`
@@ -103,7 +102,7 @@ const Kanban: React.FC<KanbanProps> = ({ groupedTasks }) => {
                             onDrop={(e) => onDrop(e, groupName as TaskStatus)}
                         >
                             <TasksColumnTitle
-                                variant="paragraphSM"
+                                variant="paragraph-sm"
                                 weight="semibold"
                                 color={
                                     StatusToColumnTitleColor[

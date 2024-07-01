@@ -22,7 +22,6 @@ const Illustration = styled.img.attrs({ alt: "There is no data" })`
 `;
 const Text = styled(Typography)`
     margin-bottom: var(--space-48);
-    text-align: center;
 `;
 
 const ActionButton = styled(Button)`
@@ -38,7 +37,7 @@ const NoDataPlaceholder: React.FC<NoDatePlaceholderProps> = ({
     return (
         <NoDataPlaceholderBase>
             <Illustration src={illustrationUrl} />
-            <Text variant="paragraphLG" weight="medium">
+            <Text variant="paragraph-lg" weight="medium">
                 {text}
             </Text>
             {buttonText ? (

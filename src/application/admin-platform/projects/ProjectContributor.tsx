@@ -36,10 +36,6 @@ const ProjectContributorBase = styled.div<{
         `}
 `;
 
-const ProjectContributorPosition = styled(Typography)`
-    color: var(--jaguar-500);
-`;
-
 const ProjectContributor: React.FC<ProjectContributorProps> = ({
     details,
     layout,
@@ -54,15 +50,16 @@ const ProjectContributor: React.FC<ProjectContributorProps> = ({
                 shape="rounded"
             />
             <div>
-                <Typography variant="paragraphSM" weight="medium">
+                <Typography variant="paragraph-sm" weight="medium">
                     {details.firstName} {details.lastName}
                 </Typography>
-                <ProjectContributorPosition
-                    variant="subtitleSM"
+                <Typography
+                    color="neutral"
+                    variant="subtitle-sm"
                     weight="medium"
                 >
                     {details.position}
-                </ProjectContributorPosition>
+                </Typography>
             </div>
         </ProjectContributorBase>
     );

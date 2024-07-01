@@ -11,7 +11,7 @@ const SideBarLinks: React.FC<SideBarLinksProps> = ({ links, logOut }) => {
                 return (
                     <div className="side-bar__link-group" key={idx}>
                         <Typography
-                            variant="subtitleMD"
+                            variant="subtitle-md"
                             weight="semibold"
                             className="side-bar__link-group-title"
                         >

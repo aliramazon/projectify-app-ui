@@ -77,7 +77,7 @@ const CreateTaskModal: React.FC<CreateTaskModalProps> = ({
 
     return (
         <Modal show={show} position="center">
-            <ModalTitle variant="paragraphLG" weight="medium">
+            <ModalTitle variant="paragraph-lg" weight="medium">
                 New Task
             </ModalTitle>
             <Inputs>

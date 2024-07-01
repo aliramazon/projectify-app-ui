@@ -25,15 +25,7 @@ const CardBase = styled(BaseCard)`
 
     .cardTextWrapper {
         padding: var(--space-24);
-    }
-
-    .cardTitle {
-        margin-bottom: var(--space-8);
-        color: var(--jaguar-700);
-    }
-
-    .cardText {
-        color: var(--jaguar-500);
+        row-gap: var(--space-8);
     }
 `;
 
@@ -54,17 +46,13 @@ export const Card: React.FC<CardProps> = ({
             />
 
             <BaseCard borderRadius="large" className="cardTextWrapper">
-                <Typography
-                    variant="paragraphLG"
-                    weight="bold"
-                    className="cardTitle"
-                >
+                <Typography variant="paragraph-lg" weight="bold">
                     {title}
                 </Typography>
                 <Typography
-                    variant="paragraphSM"
+                    variant="paragraph-sm"
                     weight="normal"
-                    className="cardText"
+                    color="neutral"
                 >
                     {text}
                 </Typography>

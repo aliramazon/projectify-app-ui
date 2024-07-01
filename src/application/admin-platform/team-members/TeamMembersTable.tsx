@@ -32,10 +32,6 @@ const TableContainer = styled(Scrollable)`
     height: calc(100% - 13rem);
 `;
 
-const JoinedDate = styled(Typography)`
-    color: var(--dodger-blue-600);
-`;
-
 const options: MenuOption[] = [
     { label: "Edit", iconName: "edit", value: "edit", color: "primary" },
     {
@@ -117,7 +113,7 @@ const TeamMembersTable: React.FC<TeamMembersTableProps> = ({ data }) => {
                             <TableRow key={teamMember.id} columns={columns}>
                                 <TableBodyCell>
                                     <Typography
-                                        variant="paragraphSM"
+                                        variant="paragraph-sm"
                                         weight="medium"
                                     >
                                         {teamMember.firstName}
@@ -125,7 +121,7 @@ const TeamMembersTable: React.FC<TeamMembersTableProps> = ({ data }) => {
                                 </TableBodyCell>
                                 <TableBodyCell>
                                     <Typography
-                                        variant="paragraphSM"
+                                        variant="paragraph-sm"
                                         weight="medium"
                                     >
                                         {teamMember.lastName}
@@ -133,7 +129,7 @@ const TeamMembersTable: React.FC<TeamMembersTableProps> = ({ data }) => {
                                 </TableBodyCell>
                                 <TableBodyCell>
                                     <Typography
-                                        variant="paragraphSM"
+                                        variant="paragraph-sm"
                                         weight="medium"
                                     >
                                         {teamMember.position}
@@ -141,19 +137,20 @@ const TeamMembersTable: React.FC<TeamMembersTableProps> = ({ data }) => {
                                 </TableBodyCell>
                                 <TableBodyCell>
                                     <Typography
-                                        variant="paragraphSM"
+                                        variant="paragraph-sm"
                                         weight="medium"
                                     >
                                         {teamMember.email}
                                     </Typography>
                                 </TableBodyCell>
                                 <TableBodyCell>
-                                    <JoinedDate
-                                        variant="paragraphSM"
+                                    <Typography
+                                        variant="paragraph-sm"
                                         weight="medium"
+                                        color="info-strong"
                                     >
                                         {formatAsMMMddYYYY(teamMember.joinDate)}
-                                    </JoinedDate>
+                                    </Typography>
                                 </TableBodyCell>
                                 <TableBodyCell>
                                     <Badge

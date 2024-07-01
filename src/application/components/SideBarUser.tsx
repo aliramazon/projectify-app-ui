@@ -35,10 +35,6 @@ type UserProps = {
     onClick?: () => void;
 };
 
-const EmailTypography = styled(Typography)`
-    color: var(--jaguar-500);
-`;
-
 const SideBarUser: React.FC<UserProps> = ({ details, onClick }) => {
     return (
         <UserBase onClick={onClick}>
@@ -50,12 +46,16 @@ const SideBarUser: React.FC<UserProps> = ({ details, onClick }) => {
                 shape="rounded"
             />
             <UserDetails>
-                <Typography variant="paragraphSM" weight="medium">
+                <Typography variant="paragraph-sm" weight="medium">
                     {details.firstName} {details.lastName}
                 </Typography>
-                <EmailTypography variant="subtitleSM" weight="medium">
+                <Typography
+                    variant="subtitle-sm"
+                    weight="medium"
+                    color="neutral"
+                >
                     {details.email}
-                </EmailTypography>
+                </Typography>
             </UserDetails>
             <Icon iconName="chevron-right" />
         </UserBase>

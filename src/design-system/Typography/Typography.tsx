@@ -1,17 +1,20 @@
 import React from "react";
+import { trimWhiteSpaces } from "../utils";
 
 import {
     variantClassNames,
     weightClassNames,
     alignClassNames,
+    colorClassNames,
 } from "./classnames";
-import { trimWhiteSpaces } from "../utils";
 import { TypographyProps } from "./types";
+import "./Typography.css";
 
 export const Typography: React.FC<TypographyProps> = ({
     variant,
     weight,
     align,
+    color,
     className,
     children,
 }) => {
@@ -20,16 +23,17 @@ export const Typography: React.FC<TypographyProps> = ({
         weight !== undefined ? weightClassNames[weight] : "";
 
     const alignClassName = align !== undefined ? alignClassNames[align] : "";
+    const colorClassName = color !== undefined ? colorClassNames[color] : "";
 
     const finalClassName = trimWhiteSpaces(
-        `${variantClassName} ${weightClassName} ${alignClassName} ${
+        `typography ${variantClassName} ${weightClassName} ${alignClassName} ${colorClassName} ${
             className || ""
         }`
     );
 
     if (
-        variant === "displayLG" ||
-        variant === "displaySM" ||
+        variant === "display-lg" ||
+        variant === "display-sm" ||
         variant === "h1"
     ) {
         return <h1 className={finalClassName}>{children}</h1>;
@@ -44,12 +48,12 @@ export const Typography: React.FC<TypographyProps> = ({
     } else if (variant === "h6") {
         return <h6 className={finalClassName}>{children}</h6>;
     } else if (
-        variant === "paragraphLG" ||
-        variant === "paragraphMD" ||
-        variant === "paragraphSM" ||
-        variant === "subtitleLG" ||
-        variant === "subtitleMD" ||
-        variant === "subtitleSM"
+        variant === "paragraph-lg" ||
+        variant === "paragraph-md" ||
+        variant === "paragraph-sm" ||
+        variant === "subtitle-lg" ||
+        variant === "subtitle-md" ||
+        variant === "subtitle-sm"
     ) {
         return <p className={finalClassName}>{children}</p>;
     }

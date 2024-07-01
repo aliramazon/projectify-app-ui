@@ -116,7 +116,7 @@ const CreateTeamMemberModal: React.FC<ModalProps> = ({ show, closeModal }) => {
 
     return (
         <Modal show={show} position="center">
-            <ModalTitle variant="paragraphLG" weight="medium">
+            <ModalTitle variant="paragraph-lg" weight="medium">
                 New Member
             </ModalTitle>
             <Inputs>

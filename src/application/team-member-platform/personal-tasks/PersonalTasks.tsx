@@ -44,7 +44,7 @@ const Tasks = () => {
             )}
 
             <Modal show={showCreateTaskModal} position="center">
-                <CreateTaskModalTitle variant="paragraphLG" weight="medium">
+                <CreateTaskModalTitle variant="paragraph-lg" weight="medium">
                     New Task
                 </CreateTaskModalTitle>
                 <Inputs>

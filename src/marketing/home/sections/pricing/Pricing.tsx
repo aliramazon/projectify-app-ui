@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Switch, Typography } from "design-system";
 import {
@@ -6,9 +7,9 @@ import {
     SectionHeading,
     SectionSubHeading,
 } from "marketing/components";
-import { useState } from "react";
-
-type BillingTermType = "monthly" | "yearly";
+import { BillingTermType } from "./types";
+import { data } from "./data";
+import { PricingCard } from "./PricingCard";
 
 const PricingBase = styled(SectionBase)`
     background-color: var(--jaguar-25);
@@ -18,13 +19,21 @@ const PricingBase = styled(SectionBase)`
     }
 `;
 
+const PricingCards = styled.div`
+    display: flex;
+    gap: var(--space-32);
+
+    & > .baseCard {
+        flex-basis: calc((100% - var(--space-64)) / 3);
+    }
+`;
+
 const BillingTermSwitcher = styled.div`
     display: flex;
     column-gap: var(--space-24);
     align-items: center;
     width: max-content;
-    margin: 0 auto;
-    margin-top: var(--space-16);
+    margin: var(--space-16) auto var(--space-48) auto;
 `;
 
 const BillingTerm = styled.div`
@@ -102,6 +111,17 @@ export const Pricing = () => {
                         </Typography>
                     </BillingTerm>
                 </BillingTermSwitcher>
+                <PricingCards>
+                    {data.map((plan) => {
+                        return (
+                            <PricingCard
+                                billingTerm={billingTerm}
+                                design={plan.design}
+                                plan={plan.plan}
+                            />
+                        );
+                    })}
+                </PricingCards>
             </Container>
         </PricingBase>
     );

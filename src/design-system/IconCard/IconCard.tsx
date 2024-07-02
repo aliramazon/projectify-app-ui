@@ -1,4 +1,5 @@
-import { Icon, IconSize } from "design-system/Icon";
+import { Icon, IconSize } from "../Icon";
+import { trimWhiteSpaces } from "../utils";
 import { IconCardProps } from "./types";
 import { colorClassNames, sizeClassNames, shapeClassNames } from "./classnames";
 
@@ -15,12 +16,17 @@ const IconCard: React.FC<IconCardProps> = ({
     size,
     iconName,
     shape,
+    className,
 }) => {
     const sizeClassName = sizeClassNames[size];
     const colorClassName = colorClassNames[color];
     const shapeClassName = shapeClassNames[shape];
 
-    const classNames = `iconCard ${sizeClassName} ${colorClassName} ${shapeClassName}`;
+    const classNames = trimWhiteSpaces(
+        `iconCard ${sizeClassName} ${colorClassName} ${shapeClassName} ${
+            className ? className : ""
+        }`
+    );
     const iconSize = IconCardIconSize[size];
 
     return (

@@ -86,6 +86,10 @@
 .baseCard.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--jaguar-50);
 }
+.baseCard-primary.baseCard-hasShadow {
+    box-shadow: 0px 3px 6px 0px var(--violet-100);
+}
+
 .baseCard-primaryLight.baseCard-hasShadow {
     box-shadow: 0px 3px 6px 0px var(--violet-50);
 }

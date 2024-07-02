@@ -22,4 +22,5 @@ export interface IconCardProps {
     size: IconCardSize;
     iconName: IconName;
     shape: IconCardShape;
+    className?: string;
 }

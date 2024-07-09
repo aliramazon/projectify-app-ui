@@ -108,7 +108,7 @@ export const data: PricingCardData[] = [
                 buttonColor: "primary",
                 buttonVariant: "contained",
                 buttonText: "Try free for 30 days",
-                checkMarkColor: "sunglow",
+                checkMarkColor: "green",
             },
         },
     },

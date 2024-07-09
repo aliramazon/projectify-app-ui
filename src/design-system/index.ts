@@ -20,5 +20,6 @@ export * from "./Progress";
 export * from "./Table";
 export * from "./IconCard";
 export * from "./BaseCard";
+export * from "./IconButon";
 
 export * from "./utils";

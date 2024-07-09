@@ -1,4 +1,6 @@
+import React from "react";
 import { To } from "react-router-dom";
+import { IconName } from "../Icon";
 
 export type ButtonSize = "sm" | "md" | "lg";
 export type ButtonShape = "rounded" | "circle";
@@ -15,6 +17,8 @@ interface ButtonBaseProps {
     disabled?: boolean;
     className?: string;
     children: React.ReactNode;
+    startIcon?: React.ReactNode | IconName;
+    endIcon?: React.ReactNode | IconName;
     onClick?: () => void;
 }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Button, Input } from "design-system";
 import { AuthActionLink, AuthWrapper } from "application/components";
-import pageImg from "assets/images/auth-page.jpg";
+import pageImg from "application/assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;

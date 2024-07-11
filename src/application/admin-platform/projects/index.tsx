@@ -9,7 +9,7 @@ import { NoDataPlaceholder, PageHeader } from "application/components";
 import { CreateProjectModal } from "./CreateProjectModal";
 import { ProjectsFilters } from "./ProjectsFilters";
 import { ProjectsTable } from "./ProjectsTable";
-import noProject from "assets/illustrations/no-project.svg";
+import noProject from "application/assets/illustrations/no-project.svg";
 
 const AdminProjectsPage = () => {
     const [showCreateProjectModal, setShowCreateProjectModal] = useState(false);

@@ -6,7 +6,7 @@ import { Button, Input } from "design-system";
 import { teamMemberService } from "api";
 import { useLocalStorage } from "hooks";
 import { AuthActionLink, AuthWrapper } from "application/components";
-import pageImg from "assets/images/auth-page.jpg";
+import pageImg from "application/assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;

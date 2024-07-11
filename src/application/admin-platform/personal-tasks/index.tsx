@@ -8,7 +8,7 @@ import { groupTasksByStatus } from "utils";
 import { CreateTaskModal } from "./CreateTaskModal";
 import { Kanban } from "./Kanban";
 
-import noTask from "assets/illustrations/no-task.svg";
+import noTask from "application/assets/illustrations/no-task.svg";
 import toast from "react-hot-toast";
 
 const AdminTasksPage = () => {

@@ -3,8 +3,8 @@ import toast from "react-hot-toast";
 import styled from "styled-components";
 import { Button, Input, Toaster } from "design-system";
 import { adminService } from "api";
-import pageImg from "assets/images/auth-page.jpg";
 import { AuthActionLink, AuthWrapper } from "application/components";
+import pageImg from "application/assets/images/auth-page.jpg";
 
 const Form = styled.form`
     width: 100%;

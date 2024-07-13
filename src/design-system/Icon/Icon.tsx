@@ -5,6 +5,7 @@ import { trimWhiteSpaces } from "../utils";
 import "./Icon.css";
 
 const sizeClassNames = {
+    20: "icon-xsmall",
     24: "icon-small",
     36: "icon-medium",
     48: "icon-large",

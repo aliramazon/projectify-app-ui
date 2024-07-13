@@ -39,7 +39,7 @@ export type IconName =
     | "pause-in-circle"
     | "play-in-circle";
 
-export type IconSize = 24 | 36 | 48;
+export type IconSize = 20 | 24 | 36 | 48;
 
 export type IconProps = {
     iconName: IconName;

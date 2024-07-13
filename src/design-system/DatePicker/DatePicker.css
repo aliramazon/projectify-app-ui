@@ -143,12 +143,12 @@
 }
 
 .react-datepicker__view-calendar-icon .input {
-    padding: 0 var(--space-16);
+    padding: 0 var(--space-12);
 }
 
 .v1-date-picker__calendar-icon.react-datepicker__calendar-icon {
     padding: 0;
-    right: var(--space-16);
+    right: var(--space-12);
     top: 50%;
     transform: translateY(-50%);
     height: 2rem;

@@ -148,7 +148,7 @@
 
 .v1-date-picker__calendar-icon.react-datepicker__calendar-icon {
     padding: 0;
-    right: var(--space-12);
+    right: var(--space-16);
     top: 50%;
     transform: translateY(-50%);
     height: 2rem;

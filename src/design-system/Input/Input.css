@@ -146,6 +146,10 @@ input::placeholder,
     color: var(--red-orange-500);
 }
 
+.input-hintMessage--disabled {
+    color: var(--jaguar-300);
+}
+
 /* Clearable */
 
 .input.input-clearable {

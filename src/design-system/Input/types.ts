@@ -19,6 +19,7 @@ export type BaseInputProps = {
 
     onChange: (value: string) => void;
     value: string;
+    autoFocus?: boolean;
 };
 
 type WithLabel = {

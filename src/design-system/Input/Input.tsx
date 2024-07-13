@@ -32,6 +32,7 @@ const Input: React.FC<InputProps> = (props) => {
         value,
         clearable,
         iconName,
+        autoFocus,
     } = props;
 
     const sizeClassName = size !== undefined ? sizeClassNames[size] : "";
@@ -47,7 +48,9 @@ const Input: React.FC<InputProps> = (props) => {
     );
 
     const hintMessageClass = trimWhiteSpaces(
-        `input-hintMessage ${error ? "input-hintMessage--error" : ""}`
+        `input-hintMessage ${error ? "input-hintMessage--error" : ""} ${
+            disabled ? "input-hintMessage--disabled" : ""
+        }`
     );
 
     const handleOnChange = (
@@ -78,6 +81,7 @@ const Input: React.FC<InputProps> = (props) => {
                         id={id}
                         onChange={handleOnChange}
                         value={value}
+                        autoFocus={autoFocus}
                     />
                 ) : (
                     <input
@@ -88,6 +92,7 @@ const Input: React.FC<InputProps> = (props) => {
                         id={id}
                         onChange={handleOnChange}
                         value={value}
+                        autoFocus={autoFocus}
                     />
                 )}
                 {clearable && value.length > 0 && (

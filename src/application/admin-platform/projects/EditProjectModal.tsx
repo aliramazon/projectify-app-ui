@@ -134,6 +134,7 @@ const EditProjectModal: React.FC<EditProjectModalProps> = ({
                     onChange={onChangeDescription}
                     shape="rounded"
                     size="lg"
+                    clearable
                 />
                 <DatePickerV1
                     inputSize="lg"

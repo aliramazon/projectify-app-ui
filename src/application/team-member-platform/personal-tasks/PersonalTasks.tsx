@@ -62,6 +62,7 @@ const Tasks = () => {
                         onChange={() => {}}
                         shape="rounded"
                         size="lg"
+                        clearable
                     />
                 </Inputs>
                 <Buttons>

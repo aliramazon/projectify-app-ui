@@ -1,9 +1,9 @@
 import React from "react";
-import { InputProps } from "./types";
+import { Icon } from "../Icon";
 import { Label } from "../Label";
+import { InputProps } from "./types";
 import { trimWhiteSpaces } from "../utils";
 import "./Input.css";
-import { Icon } from "../Icon";
 
 const sizeClassNames = {
     sm: "input-small",
